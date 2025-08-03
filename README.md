@@ -26,6 +26,9 @@ This add-on could be never possible without them, Thank you all.
 # Preview of the Add-on
 The addon is still in progress so here's some sneak peek to the models and texture of the realistic mobs.
 
+## Duckling
+<img src="https://cdn.discordapp.com/attachments/1396794001545498666/1396827663393624175/duckling2.gif?ex=6890a422&is=688f52a2&hm=df45343c4d990ad61507747bdfe755b304994152ca9a27432c1ba9d0b5c5c06b&" width="300">
+
 ## Chicken
 <img src="https://cdn.discordapp.com/attachments/1401389263219593350/1401389906105860127/SPOILER_SPOILER_chicken.gif?ex=6890198e&is=688ec80e&hm=1416f04979d2fec5ff8050abb395948fdb6b64b1d6a87ce6d6c4c71317bcdfad&" width="300">
 
