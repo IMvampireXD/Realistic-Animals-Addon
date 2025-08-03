@@ -25,14 +25,11 @@ This add-on could be never possible without them, Thank you all.
 
 # Preview of the Add-on
 The addon is still in progress so here's some sneak peek to the models and texture of the realistic mobs.
-
 ## Chicken
 ![Alt text](https://cdn.discordapp.com/attachments/1401389263219593350/1401389906105860127/SPOILER_SPOILER_chicken.gif?ex=6890198e&is=688ec80e&hm=1416f04979d2fec5ff8050abb395948fdb6b64b1d6a87ce6d6c4c71317bcdfad&)
 ## Cow
-https://cdn.discordapp.com/attachments/1401389263219593350/1401390628709077012/bull.gif?ex=68901a3a&is=688ec8ba&hm=9882611d3ff59db672c4872856a8667ff5883d113e18caea49e948286ca8705c&
-
+![Alt text](https://cdn.discordapp.com/attachments/1401389263219593350/1401390628709077012/bull.gif?ex=68901a3a&is=688ec8ba&hm=9882611d3ff59db672c4872856a8667ff5883d113e18caea49e948286ca8705c&)
 ## Sheep
-https://cdn.discordapp.com/attachments/1401389263219593350/1401390708497055824/sheep.gif?ex=68901a4d&is=688ec8cd&hm=2d3d3853ab048a921b45c877ea2e001056c195ae27fee8afe05bf4c70db23a2a&
-
+![Alt text](https://cdn.discordapp.com/attachments/1401389263219593350/1401390708497055824/sheep.gif?ex=68901a4d&is=688ec8cd&hm=2d3d3853ab048a921b45c877ea2e001056c195ae27fee8afe05bf4c70db23a2a&)
 ## Pig
-https://cdn.discordapp.com/attachments/1401389263219593350/1401390808355049533/pig.gif?ex=68901a65&is=688ec8e5&hm=44f080bd24fb41a590ad45a643a20e4a15899e3046cb32e1084905cf31cd91a1&
+![Alt text](https://cdn.discordapp.com/attachments/1401389263219593350/1401390808355049533/pig.gif?ex=68901a65&is=688ec8e5&hm=44f080bd24fb41a590ad45a643a20e4a15899e3046cb32e1084905cf31cd91a1&)
