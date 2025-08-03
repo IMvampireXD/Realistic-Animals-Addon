@@ -27,7 +27,7 @@ This add-on could be never possible without them, Thank you all.
 The addon is still in progress so here's some sneak peek to the models and texture of the realistic mobs.
 
 ## Chicken
-![Alt text]([https://example.com/your-animation.gif](https://cdn.discordapp.com/attachments/1401389263219593350/1401389906105860127/SPOILER_SPOILER_chicken.gif?ex=6890198e&is=688ec80e&hm=1416f04979d2fec5ff8050abb395948fdb6b64b1d6a87ce6d6c4c71317bcdfad&
+![Alt text]([https://example.com/your-animation.gif](https://cdn.discordapp.com/attachments/1401389263219593350/1401389906105860127/SPOILER_SPOILER_chicken.gif?ex=6890198e&is=688ec80e&hm=1416f04979d2fec5ff8050abb395948fdb6b64b1d6a87ce6d6c4c71317bcdfad&)
 )
 ## Cow
 https://cdn.discordapp.com/attachments/1401389263219593350/1401390628709077012/bull.gif?ex=68901a3a&is=688ec8ba&hm=9882611d3ff59db672c4872856a8667ff5883d113e18caea49e948286ca8705c&
