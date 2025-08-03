@@ -26,6 +26,9 @@ This add-on could be never possible without them, Thank you all.
 # Preview of the Add-on
 The addon is still in progress so here's some sneak peek to the models and texture of the realistic mobs.
 
+## Male Duck
+<img src="https://cdn.discordapp.com/attachments/1396794001545498666/1396812724519829514/duck9.png?ex=68909639&is=688f44b9&hm=dbf3c9d361eca01689e8c4c19e644afa0fe9a40f9174137ac410bd800a9359be&" width="300">
+
 ## Duckling
 <img src="https://cdn.discordapp.com/attachments/1396794001545498666/1396827663393624175/duckling2.gif?ex=6890a422&is=688f52a2&hm=df45343c4d990ad61507747bdfe755b304994152ca9a27432c1ba9d0b5c5c06b&" width="300">
 
