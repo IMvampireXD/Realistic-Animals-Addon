@@ -1,4 +1,4 @@
-# Realistic-Animals-Addon
+<img width="658" height="724" alt="image" src="https://github.com/user-attachments/assets/e8299b19-7676-43f4-8f51-a90a5d6cca1c" /># Realistic-Animals-Addon
 A project about adding birds and incubation related things. Adds ducks, makes chickens and some mobs more realistic. Chickens lay 3d eggs on ground, Hatch eggs in nests, and more.
 
 ## This addon is still in work, If someone wants to help, or have any issues with the addon, please contact me on discord @finnafinest_
@@ -28,6 +28,9 @@ The addon is still in progress so here's some sneak peek to the models and textu
 
 ## Male Duck
 <img src="https://cdn.discordapp.com/attachments/1396794001545498666/1396812724519829514/duck9.png?ex=68909639&is=688f44b9&hm=dbf3c9d361eca01689e8c4c19e644afa0fe9a40f9174137ac410bd800a9359be&" width="300">
+
+
+<img width="658" height="724" alt="image" src="https://github.com/user-attachments/assets/3ea0ae8b-597a-4f41-8f93-259c09c7da54" />
 
 ## Duckling
 <img src="https://cdn.discordapp.com/attachments/1396794001545498666/1396827663393624175/duckling2.gif?ex=6890a422&is=688f52a2&hm=df45343c4d990ad61507747bdfe755b304994152ca9a27432c1ba9d0b5c5c06b&" width="300">
