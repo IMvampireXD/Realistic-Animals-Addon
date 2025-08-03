@@ -1,7 +1,7 @@
 # Realistic-Animals-Addon
 A project about adding birds and incubation related things. Adds ducks, makes chickens and some mobs more realistic. Chickens lay 3d eggs on ground, Hatch eggs in nests, and more.
 
-## This addon is still in work, If someone wants to help, or have any issues with the addon, please contact me on discord @finnafinest
+## This addon is still in work, If someone wants to help, or have any issues with the addon, please contact me on discord @finnafinest_
 
 # To-do list. we'll make:
 - A chicken coop house. (Probably using structures and using custom blocks).
