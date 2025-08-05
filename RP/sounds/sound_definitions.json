@@ -1,4 +1,27 @@
 {
 	"format_version": "1.14.0",
-	"sound_definitions": {}
+	"sound_definitions": {
+		"mob.raa.duck.idle": {
+			"category": "neutral",
+			"sounds": [
+				"sounds/raa/mob/duck/idle1",
+				"sounds/raa/mob/duck/idle2",
+				"sounds/raa/mob/duck/idle3",
+				"sounds/raa/mob/duck/idle4"
+			]
+		},
+		"mob.raa.duck.hurt": {
+			"category": "neutral",
+			"sounds": [
+				"sounds/raa/mob/duck/hurt1",
+				"sounds/raa/mob/duck/hurt2"
+			]
+		},
+		"mob.raa.duck.step": {
+			"category": "neutral",
+			"sounds": [
+				"sounds/raa/mob/duck/step"
+			]
+		}
+	}
 }

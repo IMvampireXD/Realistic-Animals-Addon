@@ -1,1 +1,45 @@
-{}
+{
+  "entity_sounds": {
+    "entities": {
+      "raa:duck_female": {
+        "volume": 1.0,
+        "pitch": [ 0.8, 1.2 ],
+        "events": {
+          "ambient": "mob.raa.duck.idle",
+          "hurt": "mob.raa.duck.hurt",
+          "death": "mob.raa.duck.hurt",
+          "step": {
+            "sound": "mob.raa.duck.step",
+            "volume": 0.25
+          }
+        }
+      },
+      "raa:duckling": {
+        "volume": 1.0,
+        "pitch": [ 0.8, 1.2 ],
+        "events": {
+          "ambient": "mob.raa.duck.idle",
+          "hurt": "mob.raa.duck.hurt",
+          "death": "mob.raa.duck.hurt",
+          "step": {
+            "sound": "mob.raa.duck.step",
+            "volume": 0.25
+          }
+        }
+      },
+      "raa:male_duck": {
+        "volume": 1.0,
+        "pitch": [ 0.8, 1.2 ],
+        "events": {
+          "ambient": "mob.raa.duck.idle",
+          "hurt": "mob.raa.duck.hurt",
+          "death": "mob.raa.duck.hurt",
+          "step": {
+            "sound": "mob.raa.duck.step",
+            "volume": 0.25
+          }
+        }
+      }
+    }
+  }
+}

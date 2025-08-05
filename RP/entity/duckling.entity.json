@@ -7,28 +7,28 @@
 				"default": "entity_alphatest"
 			},
 			"textures": {
-				"default": "textures/entity/duckling"
+				"default": "textures/raa/entity/duckling"
 			},
 			"geometry": {
-				"default": "geometry.duckling"
+				"default": "geometry.raa.duckling"
 			},
 			"render_controllers": [
-				"controller.render.duckling"
+				"controller.render.raa.duckling"
 			],
 			"spawn_egg": {
 				"texture": "raa_duckling_egg",
 				"texture_index": 0
 			},
 			"animations": {
-				"duckling_peck": "duckling_peck",
-				"duckling_idle": "duckling_idle",
-				"duckling_walk": "duckling_walk",
-				"duckling_swim": "duckling_swim",
-				"duckling": "controller.animation.duckling"
+				"peck": "animation.raa.duckling.peck",
+				"idle": "animation.raa.duckling.idle",
+				"walk": "animation.raa.duckling.walk",
+				"swim": "animation.raa.duckling.swim",
+				"general": "controller.animation.raa.duckling.general"
 			},
 			"scripts": {
 				"animate": [
-					"duckling"
+					"general"
 				]
 			}
 		}

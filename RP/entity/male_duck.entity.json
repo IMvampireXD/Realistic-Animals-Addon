@@ -7,28 +7,28 @@
 				"default": "entity_alphatest"
 			},
 			"textures": {
-				"default": "textures/entity/duck"
+				"default": "textures/raa/entity/duck"
 			},
 			"geometry": {
-				"default": "geometry.duck"
+				"default": "geometry.raa.duck"
 			},
 			"render_controllers": [
-				"controller.render.male_duck"
+				"controller.render.raa.male_duck"
 			],
 			"spawn_egg": {
 				"texture": "raa_male_duck_egg",
 				"texture_index": 0
 			},
 			"animations": {
-				"duck_idle": "duck_idle",
-				"duck_peck": "duck_peck",
-				"duck_swim": "duck_swim",
-				"duck_walk": "duck_walk",
-				"duck": "controller.animation.duck"
+				"idle": "animation.raa.duck.idle",
+				"peck": "animation.raa.duck.peck",
+				"swim": "animation.raa.duck.swim",
+				"walk": "animation.raa.duck.walk",
+				"general": "controller.animation.raa.duck.general"
 			},
 			"scripts": {
 				"animate": [
-					"duck"
+					"general"
 				]
 			}
 		}

@@ -1,7 +1,7 @@
 {
 	"format_version": "1.20.80",
 	"render_controllers": {
-		"controller.render.duckling": {
+		"controller.render.raa.duckling": {
 			"geometry": "geometry.default",
 			"materials": [
 				{

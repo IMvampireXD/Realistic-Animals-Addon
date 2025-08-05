@@ -90,6 +90,7 @@
 			},
 			"minecraft:navigation.generic": {
 				"can_path_over_water": true,
+				"can_walk_in_water": true,
 				"avoid_damage_blocks": true,
 				"can_swim": true,
 				"can_breach": true,
@@ -100,9 +101,6 @@
 			"minecraft:can_climb": {},
 			"minecraft:despawn": {
 				"despawn_from_distance": {}
-			},
-			"minecraft:behavior.float": {
-				"priority": 0
 			},
 			"minecraft:behavior.panic": {
 				"priority": 1,

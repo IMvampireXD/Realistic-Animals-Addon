@@ -1,0 +1,80 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.raa.duck.general": {
+			"initial_state": "idle",
+			"states": {
+				"idle": {
+					"animations": [
+						"idle"
+					],
+					"transitions": [
+						{
+							"walk": "q.ground_speed"
+						},
+						{
+							"swim": "q.is_swimming"
+						},
+						{
+							"peck": "q.is_grazing"
+						}
+					],
+					"blend_transition": 0.2
+				},
+				"walk": {
+					"animations": [
+						{
+							"walk": "q.modified_move_speed"
+						}
+					],
+					"transitions": [
+						{
+							"idle": "!q.ground_speed"
+						},
+						{
+							"swim": "q.is_swimming"
+						},
+						{
+							"peck": "q.is_grazing"
+						}
+					],
+					"blend_transition": 0.2
+				},
+				"swim": {
+					"animations": [
+						"swim"
+					],
+					"transitions": [
+						{
+							"idle": "!q.is_swimming && !q.ground_speed"
+						},
+						{
+							"walk": "!q.is_swimming && q.ground_speed"
+						},
+						{
+							"peck": "q.is_grazing"
+						}
+					],
+					"blend_transition": 0.2
+				},
+				"peck": {
+					"animations": [
+						"peck"
+					],
+					"transitions": [
+						{
+							"idle": "!q.ground_speed"
+						},
+						{
+							"swim": "q.is_swimming"
+						},
+						{
+							"walk": "q.ground_speed"
+						}
+					],
+					"blend_transition": 0.2
+				}
+			}
+		}
+	}
+}
