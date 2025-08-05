@@ -1,54 +1,94 @@
 # Realistic-Animals-Addon
-A project about adding birds and incubation related things. Adds ducks, makes chickens and some mobs more realistic. Chickens lay 3d eggs on ground, Hatch eggs in nests, and more.
+<p>
+A project about adding birds and incubation related things. Adds ducks, makes chickens and some mobs more realistic.  
+Chickens lay 3D eggs on the ground, hatch eggs in nests, and more.
+</p>
 
-## This addon is still in work, If someone wants to help, or have any issues with the addon, please contact me on discord @finnafinest_
+<h2>This addon is still in work</h2>
+<p>
+If someone wants to help, or has any issues with the addon, please contact me on Discord <b>@finnafinest_</b>
+</p>
 
-# To-do list. we'll make:
-- A chicken coop house. (Probably using structures and using custom blocks).
-- Ducks (Male and Female variants) and ducklings (Baby ducks).
-- Chicken Feed - Spreading into ground, The chickens will peck and eat the grains one by one.
-- Egg hatching system. (Nests)
-- You can pick up chickens! (and then put them in nests myb)
-- Chickens lay 3d eggs on ground.
-- Realistic pigs, They covered in mud ;-;
-- Realistic cows, They got wheat chewing/eating animations.
-- Realistic chickens, They run when players try to catch them :>
-- Realistic sheeps.
+<h1>To-do list. We'll make:</h1>
+<ul>
+  <li>A chicken coop house (probably using structures and custom blocks).</li>
+  <li>Ducks (male and female variants) and ducklings (baby ducks).</li>
+  <li>Chicken feed – spreading into the ground; the chickens will peck and eat the grains one by one.</li>
+  <li>Egg hatching system (nests).</li>
+  <li>You can pick up chickens (and then put them in nests maybe).</li>
+  <li>Chickens lay 3D eggs on the ground.</li>
+  <li>Realistic pigs, they’re covered in mud ;-;</li>
+  <li>Realistic cows, with wheat chewing/eating animations.</li>
+  <li>Realistic chickens, they run when players try to catch them :&gt;</li>
+  <li>Realistic sheep.</li>
+</ul>
 
-# Credits
+<h1>Credits</h1>
+<p>
+<b>Project leader and ideas:</b>  
+@finnafinest_ (Discord) / @IMvampireXD (GitHub)
+</p>
 
-Project leader and ideas by - @finnafinest_ (discord) / @IMvampireXD (github)
+<p>
+<b>Mob behaviour coders:</b>  
+<ul>
+  <li>@Sir Jackster (Discord → @sir3jackster)</li>
+  <li>@Jean Lucas (Discord → @jeanlucasmcpe)</li>
+  <li>@Venoct Euphrosyne (Discord → @venoct_euphrosyne)</li>
+</ul>
+</p>
 
-Mob behaviour coders - @Sir Jackster (discord => @sir3jackster),
-                         @Jean Lucas (discord => @jeanlucasmcpe),
-                         @Venoct Euphrosyne (discord => @venoct_euphrosyne)
+<p>
+<b>Sheep, Cow, Pigs, and Roosters models and animations:</b>  
+@Victão Sigma (Discord → victaosigma)  
+(It’s a free-to-use resource <a href="https://discord.com/channels/523663022053392405/1401389263219593350" target="_blank">link</a>)
+</p>
 
-Sheep, Cow, Pigs and Roosters, models and animations by - @Victão Sigma (discord => victaosigma) (it's a free to use resource [link](https://discord.com/channels/523663022053392405/1401389263219593350))
+<p>
+<b>Duck and ducklings models and animations:</b>  
+Slime (Discord → @slimesmc)
+</p>
 
-Duck and ducklings models and animations by - Slime. (discord => @slimesmc)
+<p>
+This add-on could never be possible without them. Thank you all.
+</p>
 
-This add-on could be never possible without them, Thank you all.
+<h1>Preview of the Add-on</h1>
+<p>
+The addon is still in progress, so here’s a sneak peek at the models and textures of the realistic mobs.
+</p>
 
-# Preview of the Add-on
-The addon is still in progress so here's some sneak peek to the models and texture of the realistic mobs.
+<h2>Male Duck</h2>
+<p>
+<img src="https://cdn.discordapp.com/attachments/1396794001545498666/1396812724519829514/duck9.png" width="100">
+</p>
 
-## Male Duck
-<img src="https://cdn.discordapp.com/attachments/1396794001545498666/1396812724519829514/duck9.png?ex=68909639&is=688f44b9&hm=dbf3c9d361eca01689e8c4c19e644afa0fe9a40f9174137ac410bd800a9359be&" width="100">
+<h2>Female Duck</h2>
+<p>
+<img src="https://cdn.discordapp.com/attachments/1396794001545498666/1396818167065743491/duck10.png" width="100">
+</p>
 
-## Female Duck
-<img src="https://cdn.discordapp.com/attachments/1396794001545498666/1396818167065743491/duck10.png?ex=68909b4a&is=688f49ca&hm=af9760ff7e78659409a52673bae9f277a3d7705156ecb0752576ae23265d797a&" width="100">
+<h2>Duckling</h2>
+<p>
+<img src="https://cdn.discordapp.com/attachments/1396794001545498666/1396827663393624175/duckling2.gif" width="300">
+</p>
 
-## Duckling
-<img src="https://cdn.discordapp.com/attachments/1396794001545498666/1396827663393624175/duckling2.gif?ex=6890a422&is=688f52a2&hm=df45343c4d990ad61507747bdfe755b304994152ca9a27432c1ba9d0b5c5c06b&" width="300">
+<h2>Chicken</h2>
+<p>
+<img src="https://cdn.discordapp.com/attachments/1401389263219593350/1401389906105860127/SPOILER_SPOILER_chicken.gif" width="300">
+</p>
 
-## Chicken
-<img src="https://cdn.discordapp.com/attachments/1401389263219593350/1401389906105860127/SPOILER_SPOILER_chicken.gif?ex=6890198e&is=688ec80e&hm=1416f04979d2fec5ff8050abb395948fdb6b64b1d6a87ce6d6c4c71317bcdfad&" width="300">
+<h2>Cow</h2>
+<p>
+<img src="https://cdn.discordapp.com/attachments/1401389263219593350/1401390628709077012/bull.gif" width="300">
+</p>
 
-## Cow
-<img src="https://cdn.discordapp.com/attachments/1401389263219593350/1401390628709077012/bull.gif?ex=68901a3a&is=688ec8ba&hm=9882611d3ff59db672c4872856a8667ff5883d113e18caea49e948286ca8705c&" width="300">
+<h2>Sheep</h2>
+<p>
+<img src="https://cdn.discordapp.com/attachments/1401389263219593350/1401390708497055824/sheep.gif" width="300">
+</p>
 
-## Sheep
-<img src="https://cdn.discordapp.com/attachments/1401389263219593350/1401390708497055824/sheep.gif?ex=68901a4d&is=688ec8cd&hm=2d3d3853ab048a921b45c877ea2e001056c195ae27fee8afe05bf4c70db23a2a&" width="300">
-
-## Pig
-<img src="https://cdn.discordapp.com/attachments/1401389263219593350/1401390808355049533/pig.gif?ex=68901a65&is=688ec8e5&hm=44f080bd24fb41a590ad45a643a20e4a15899e3046cb32e1084905cf31cd91a1&" width="300">
+<h2>Pig</h2>
+<p>
+<img src="https://cdn.discordapp.com/attachments/1401389263219593350/1401390808355049533/pig.gif" width="300">
+</p>
