@@ -16,15 +16,14 @@ A project about adding birds and incubation related things. Adds ducks, makes ch
 - Realistic sheeps.
 
 # Credits
-- Project leader and most ideas by - @finnafinest_ (discord) / @IMvampireXD (github)
- ```
-- Mob behaviour coders - @Sir Jackster (discord => @sir3jackster),
+```
+Project leader and ideas by - @finnafinest_ (discord) / @IMvampireXD (github)
+Mob behaviour coders - @Sir Jackster (discord => @sir3jackster),
                          @Jean Lucas (discord => @jeanlucasmcpe),
                          @Venoct Euphrosyne (discord => @venoct_euphrosyne)
-  ```
-- Sheep, Cow, Pigs and Roosters, models and animations by - @Victão Sigma (discord => victaosigma) (it's a free to use resource [link](https://discord.com/channels/523663022053392405/1401389263219593350))
-- Duck and ducklings models and animations by - Slime. (discord => @slimesmc)
-
+Sheep, Cow, Pigs and Roosters, models and animations by - @Victão Sigma (discord => victaosigma) (it's a free to use resource [link](https://discord.com/channels/523663022053392405/1401389263219593350))
+Duck and ducklings models and animations by - Slime. (discord => @slimesmc)
+```
 This add-on could be never possible without them, Thank you all.
 
 # Preview of the Add-on
