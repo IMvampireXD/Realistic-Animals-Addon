@@ -2,7 +2,7 @@
 	"format_version": 2,
 	"metadata": {
 		"authors": [
-			"finnafinest, IMvampireXD, SirJackster"
+			"finnafinest_, SirJackster"
 		],
 		"generated_with": {
 			"bridge": [
@@ -61,23 +61,7 @@
 		},
 		{
 			"module_name": "@minecraft/server",
-			"version": "1.0.0-beta"
-		},
-		{
-			"module_name": "@minecraft/server-gametest",
-			"version": "1.0.0-beta"
-		},
-		{
-			"module_name": "@minecraft/server-ui",
-			"version": "1.0.0-beta"
-		},
-		{
-			"module_name": "@minecraft/server-admin",
-			"version": "1.0.0-beta"
-		},
-		{
-			"module_name": "@minecraft/server-net",
-			"version": "1.0.0-beta"
+			"version": "2.0.0"
 		}
 	]
 }

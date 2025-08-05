@@ -11,7 +11,8 @@
 		"components": {
 			"minecraft:icon": "raa_duck_raw",
 			"minecraft:use_modifiers": {
-				"use_duration": 1.6
+				"use_duration": 1.6,
+				"movement_modifier": 0.33
 			},
 			"minecraft:food": {
 				"nutrition": 1,
