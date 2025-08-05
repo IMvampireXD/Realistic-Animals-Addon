@@ -6,7 +6,7 @@ Chickens lay 3D eggs on the ground, hatch eggs in nests, and more.
 
 <h2>This addon is still in work</h2>
 <p>
-If someone wants to help, or has any issues with the addon, please contact me on Discord <b>@finnafinest_</b>
+If someone wants to help with this project, or has any issues with the addon, please contact me on Discord <b>@finnafinest_</b>
 </p>
 
 <h1>To-do list. We'll make:</h1>
@@ -55,7 +55,7 @@ This add-on could never be possible without them. Thank you all.
 
 <h1>Preview of the Add-on</h1>
 <p>
-The addon is still in progress, so here’s a sneak peek at the models and textures of the realistic mobs.
+here’s a sneak peek at the models and textures of the realistic mobs.
 </p>
 
 <h2>Male Duck</h2>
