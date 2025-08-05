@@ -70,25 +70,25 @@ here’s a sneak peek at the models and textures of the realistic mobs.
 
 <h2>Duckling</h2>
 <p>
-<img src="https://imgur.com/hhmuXvx" width="300">
+<img src="https://imgur.com/hhmuXvx.gif" width="300">
 </p>
 
 <h2>Chicken</h2>
 <p>
-<img src="https://imgur.com/RnYgEO7" width="300">
+<img src="https://imgur.com/RnYgEO7.gif" width="300">
 </p>
 
 <h2>Cow</h2>
 <p>
-<img src="https://imgur.com/pfcU8H8" width="300">
+<img src="https://imgur.com/pfcU8H8.gif" width="300">
 </p>
 
 <h2>Sheep</h2>
 <p>
-<img src="https://imgur.com/uU95NRc" width="300">
+<img src="https://imgur.com/uU95NRc.gif" width="300">
 </p>
 
 <h2>Pig</h2>
 <p>
-<img src="https://imgur.com/3w0FPbA" width="300">
+<img src="https://imgur.com/3w0FPbA.gif" width="300">
 </p>
