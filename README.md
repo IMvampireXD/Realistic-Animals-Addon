@@ -70,25 +70,25 @@ here’s a sneak peek at the models and textures of the realistic mobs.
 
 <h2>Duckling</h2>
 <p>
-<img src="https://cdn.discordapp.com/attachments/1396794001545498666/1396827663393624175/duckling2.gif" width="300">
+<img src="https://imgur.com/hhmuXvx" width="300">
 </p>
 
 <h2>Chicken</h2>
 <p>
-<img src="https://cdn.discordapp.com/attachments/1401389263219593350/1401389906105860127/SPOILER_SPOILER_chicken.gif" width="300">
+<img src="https://imgur.com/RnYgEO7" width="300">
 </p>
 
 <h2>Cow</h2>
 <p>
-<img src="https://cdn.discordapp.com/attachments/1401389263219593350/1401390628709077012/bull.gif" width="300">
+<img src="https://imgur.com/pfcU8H8" width="300">
 </p>
 
 <h2>Sheep</h2>
 <p>
-<img src="https://cdn.discordapp.com/attachments/1401389263219593350/1401390708497055824/sheep.gif" width="300">
+<img src="https://imgur.com/uU95NRc" width="300">
 </p>
 
 <h2>Pig</h2>
 <p>
-<img src="https://cdn.discordapp.com/attachments/1401389263219593350/1401390808355049533/pig.gif" width="300">
+<img src="https://imgur.com/3w0FPbA" width="300">
 </p>
