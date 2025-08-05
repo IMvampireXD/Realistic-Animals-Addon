@@ -1,0 +1,64 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.duckling": {
+			"initial_state": "idle",
+			"states": {
+				"idle": {
+					"animations": [
+						"duckling_idle"
+					],
+					"transitions": [
+						{
+							"walk": "query.ground_speed",
+							"swim": "query.is_swimming",
+							"peck": "query.is_grazing"
+						}
+					],
+					"blend_transition": 0.2
+				},
+				"walk": {
+					"animations": [
+						{
+							"duckling_walk": "query.modified_move_speed"
+						}
+					],
+					"transitions": [
+						{
+							"idle": "!query.ground_speed",
+							"swim": "query.is_swimming",
+							"peck": "query.is_grazing"
+						}
+					],
+					"blend_transition": 0.2
+				},
+				"swim": {
+					"animations": [
+						"duckling_swim"
+					],
+					"transitions": [
+						{
+							"idle": "!query.ground_speed",
+							"walk": "query.ground_speed",
+							"peck": "query.is_grazing"
+						}
+					],
+					"blend_transition": 0.2
+				},
+				"peck": {
+					"animations": [
+						"duckling_peck"
+					],
+					"transitions": [
+						{
+							"idle": "!query.ground_speed",
+							"swim": "query.is_swimming",
+							"walk": "query.ground_speed"
+						}
+					],
+					"blend_transition": 0.2
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,63 @@
+{
+	"format_version": "1.8.0",
+	"minecraft:spawn_rules": {
+		"description": {
+			"identifier": "raa:male_duck",
+			"population_control": "animal"
+		},
+		"conditions": [
+			{
+				"minecraft:spawns_on_surface": {},
+				"minecraft:brightness_filter": {
+					"min": 7,
+					"max": 15,
+					"adjust_for_weather": false
+				},
+				"minecraft:difficulty_filter": {
+					"min": "peaceful",
+					"max": "hard"
+				},
+				"minecraft:weight": {
+					"default": 10
+				},
+				"minecraft:herd": {
+					"min_size": 2,
+					"max_size": 8
+				},
+				"minecraft:biome_filter": [
+					{
+						"any_of": [
+							{
+								"test": "has_biome_tag",
+								"operator": "==",
+								"value": "river"
+							},
+							{
+								"test": "has_biome_tag",
+								"operator": "==",
+								"value": "beach"
+							}
+						]
+					}
+				],
+				"minecraft:spawns_underwater": {},
+				"minecraft:density_limit": {
+					"surface": 10
+				},
+				"minecraft:permute_type": [
+					{
+						"entity_type": "raa:duck_female",
+						"weight": 33
+					},
+					{
+						"weight": 33
+					},
+					{
+						"entity_type": "raa:duckling",
+						"weight": 33
+					}
+				]
+			}
+		]
+	}
+}

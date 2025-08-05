@@ -1,0 +1,21 @@
+{
+	"resource_pack_name": "Realistic Animals Addon",
+	"texture_name": "atlas.items",
+	"texture_data": {
+		"raa_male_duck_egg": {
+			"textures": "textures/items/spawn_egg_duck"
+		},
+		"raa_duck_raw": {
+			"textures": "textures/items/duck_raw"
+		},
+		"raa_duck_cooked": {
+			"textures": "textures/items/duck_cooked"
+		},
+		"raa_duck_female_egg": {
+			"textures": "textures/items/spawn_egg_duck_female"
+		},
+		"raa_duckling_egg": {
+			"textures": "textures/items/spawn_egg_duckling"
+		}
+	}
+}

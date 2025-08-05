@@ -1,0 +1,32 @@
+{
+	"format_version": "1.21.90",
+	"minecraft:item": {
+		"description": {
+			"identifier": "raa:duck_cooked",
+			"menu_category": {
+				"category": "nature",
+				"group": "minecraft:itemGroup.name.rawFood"
+			}
+		},
+		"components": {
+			"minecraft:icon": "raa_duck_cooked",
+			"minecraft:use_modifiers": {
+				"use_duration": 1.6
+			},
+			"minecraft:food": {
+				"nutrition": 7,
+				"saturation_modifier": 1
+			},
+			"minecraft:use_animation": "eat",
+			"minecraft:max_stack_size": {
+				"value": 64
+			},
+			"minecraft:stacked_by_data": {
+				"value": true
+			},
+			"minecraft:should_despawn": {
+				"value": true
+			}
+		}
+	}
+}

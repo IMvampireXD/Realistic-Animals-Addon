@@ -1,0 +1,52 @@
+{
+	"format_version": 2,
+	"metadata": {
+		"authors": [
+			"finnafinest, IMvampireXD, SirJackster"
+		],
+		"generated_with": {
+			"bridge": [
+				"2.7.48"
+			],
+			"dash": [
+				"0.11.7"
+			]
+		}
+	},
+	"header": {
+		"name": "Realistic Animals Addon",
+		"description": "A project about adding birds and incubation related things. Adds ducks, makes chickens and some mobs more realistic. Chickens lay 3d eggs on ground, Hatch eggs in nests, and more.",
+		"min_engine_version": [
+			1,
+			21,
+			90
+		],
+		"uuid": "209ad6e9-6ba3-47ee-9af7-fbd1aae5c150",
+		"version": [
+			1,
+			0,
+			0
+		]
+	},
+	"modules": [
+		{
+			"type": "resources",
+			"uuid": "5c79d25d-2fb4-4f5d-8202-32b5aa4bd068",
+			"version": [
+				1,
+				0,
+				0
+			]
+		}
+	],
+	"dependencies": [
+		{
+			"uuid": "79691136-f2ce-4234-b977-3b11591985ca",
+			"version": [
+				1,
+				0,
+				0
+			]
+		}
+	]
+}

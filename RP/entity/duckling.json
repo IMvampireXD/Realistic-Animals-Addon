@@ -1,0 +1,36 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "raa:duckling",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/duckling"
+			},
+			"geometry": {
+				"default": "geometry.duckling"
+			},
+			"render_controllers": [
+				"controller.render.duckling"
+			],
+			"spawn_egg": {
+				"texture": "raa_duckling_egg",
+				"texture_index": 0
+			},
+			"animations": {
+				"duckling_peck": "duckling_peck",
+				"duckling_idle": "duckling_idle",
+				"duckling_walk": "duckling_walk",
+				"duckling_swim": "duckling_swim",
+				"duckling": "controller.animation.duckling"
+			},
+			"scripts": {
+				"animate": [
+					"duckling"
+				]
+			}
+		}
+	}
+}

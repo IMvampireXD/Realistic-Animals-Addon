@@ -1,0 +1,36 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "raa:duck_female",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/duck_female"
+			},
+			"geometry": {
+				"default": "geometry.duck"
+			},
+			"render_controllers": [
+				"controller.render.duck_female"
+			],
+			"spawn_egg": {
+				"texture": "raa_duck_female_egg",
+				"texture_index": 0
+			},
+			"animations": {
+				"duck_idle": "duck_idle",
+				"duck_peck": "duck_peck",
+				"duck_swim": "duck_swim",
+				"duck_walk": "duck_walk",
+				"duck": "controller.animation.duck"
+			},
+			"scripts": {
+				"animate": [
+					"duck"
+				]
+			}
+		}
+	}
+}

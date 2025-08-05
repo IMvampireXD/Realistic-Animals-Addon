@@ -1,0 +1,196 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.duckling",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 2,
+				"visible_bounds_height": 1.5,
+				"visible_bounds_offset": [
+					0,
+					0.25,
+					0
+				]
+			},
+			"bones": [
+				{
+					"name": "body",
+					"pivot": [
+						0,
+						3,
+						2
+					],
+					"cubes": [
+						{
+							"origin": [
+								-3,
+								3,
+								-3
+							],
+							"size": [
+								6,
+								5,
+								7
+							],
+							"uv": [
+								0,
+								0
+							]
+						}
+					]
+				},
+				{
+					"name": "head",
+					"parent": "body",
+					"pivot": [
+						0,
+						8,
+						-1
+					],
+					"cubes": [
+						{
+							"origin": [
+								-2,
+								6,
+								-5
+							],
+							"size": [
+								4,
+								4,
+								4
+							],
+							"uv": [
+								0,
+								12
+							]
+						},
+						{
+							"origin": [
+								-1,
+								7,
+								-6
+							],
+							"size": [
+								2,
+								1,
+								1
+							],
+							"uv": [
+								26,
+								0
+							]
+						}
+					]
+				},
+				{
+					"name": "wing_2",
+					"parent": "body",
+					"pivot": [
+						3,
+						8,
+						-2
+					],
+					"cubes": [
+						{
+							"origin": [
+								3,
+								4,
+								-2
+							],
+							"size": [
+								1,
+								4,
+								6
+							],
+							"uv": [
+								0,
+								20
+							]
+						}
+					]
+				},
+				{
+					"name": "wing_1",
+					"parent": "body",
+					"pivot": [
+						-3,
+						8,
+						-2
+					],
+					"cubes": [
+						{
+							"origin": [
+								-4,
+								4,
+								-2
+							],
+							"size": [
+								1,
+								4,
+								6
+							],
+							"uv": [
+								16,
+								12
+							]
+						}
+					]
+				},
+				{
+					"name": "leg_1",
+					"pivot": [
+						1.5,
+						3,
+						2
+					],
+					"cubes": [
+						{
+							"origin": [
+								-3,
+								0,
+								0
+							],
+							"size": [
+								3,
+								3,
+								2
+							],
+							"uv": [
+								24,
+								22
+							]
+						}
+					]
+				},
+				{
+					"name": "leg_2",
+					"pivot": [
+						1.5,
+						3,
+						2
+					],
+					"cubes": [
+						{
+							"origin": [
+								0,
+								0,
+								0
+							],
+							"size": [
+								3,
+								3,
+								2
+							],
+							"uv": [
+								14,
+								22
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}
