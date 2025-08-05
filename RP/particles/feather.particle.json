@@ -10,8 +10,8 @@
 		},
 		"components": {
 			"minecraft:emitter_rate_steady": {
-				"spawn_rate": 5,
-				"max_particles": 8
+				"spawn_rate": 15,
+				"max_particles": 5
 			},
 			"minecraft:emitter_lifetime_looping": {
 				"active_time": 1
@@ -38,7 +38,7 @@
 					"uv_size": [8, 8]
 				}
 			},
-			"minecraft:particle_motion_collision": {},
+			"minecraft:particle_motion_collision": { "collision_radius": 0 },
 			"minecraft:particle_appearance_lighting": {}
 		}
 	}
