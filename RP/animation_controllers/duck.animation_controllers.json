@@ -10,7 +10,7 @@
 					],
 					"transitions": [
 						{
-							"walk": "q.ground_speed"
+							"walk": "q.modified_move_speed > 0.1"
 						},
 						{
 							"swim": "q.is_swimming"
@@ -29,7 +29,7 @@
 					],
 					"transitions": [
 						{
-							"idle": "!q.ground_speed"
+							"idle": "!(q.modified_move_speed > 0.1)"
 						},
 						{
 							"swim": "q.is_swimming"
@@ -46,7 +46,7 @@
 					],
 					"transitions": [
 						{
-							"idle": "!q.is_swimming && !q.ground_speed"
+							"idle": "!q.is_swimming && !(q.modified_move_speed > 0.1)"
 						},
 						{
 							"walk": "!q.is_swimming && q.ground_speed"
@@ -63,13 +63,13 @@
 					],
 					"transitions": [
 						{
-							"idle": "!q.ground_speed"
+							"idle": "!(q.modified_move_speed > 0.1)"
 						},
 						{
 							"swim": "q.is_swimming"
 						},
 						{
-							"walk": "q.ground_speed"
+							"walk": "q.modified_move_speed > 0.1"
 						}
 					],
 					"blend_transition": 0.2

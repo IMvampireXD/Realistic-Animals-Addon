@@ -193,7 +193,7 @@
 				"speed_multiplier": 1.1
 			},
 			"minecraft:water_movement": {
-				"drag_factor": 0.1
+				"drag_factor": 0.8
 			}
 		},
 		"events": {

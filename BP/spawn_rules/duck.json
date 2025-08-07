@@ -22,7 +22,9 @@
 				},
 				"minecraft:herd": {
 					"min_size": 2,
-					"max_size": 8
+					"max_size": 8,
+					"event": "minecraft:entity_born",
+					"event_skip_count": 1
 				},
 				"minecraft:biome_filter": [
 					{
@@ -46,15 +48,11 @@
 				},
 				"minecraft:permute_type": [
 					{
+						"weight": 50
+					},
+					{
 						"entity_type": "raa:duck_female",
-						"weight": 33
-					},
-					{
-						"weight": 33
-					},
-					{
-						"entity_type": "raa:duckling",
-						"weight": 33
+						"weight": 50
 					}
 				]
 			}
