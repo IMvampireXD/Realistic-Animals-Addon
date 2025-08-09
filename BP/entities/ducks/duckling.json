@@ -11,7 +11,7 @@
 			"minecraft:duck_baby": {
 				"minecraft:is_baby": {},
 				"minecraft:scale": {
-					"value": 0.5
+					"value": 1
 				},
 				"minecraft:ageable": {
 					"duration": 1200,
