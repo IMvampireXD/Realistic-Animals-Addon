@@ -1,0 +1,24 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "raa:egg",
+      "materials": {
+        "default": "entity",
+        "legs": "chicken_legs"
+      },
+      "textures": {
+        "egg": "textures/entity/egg"
+      },
+      "geometry": {
+        "egg": "geometry.egg"
+      },
+      "scripts": {
+        "scale": "1.6"
+      },
+      "render_controllers": [
+        "controller.render.3d_item"
+      ]
+    }
+  }
+}

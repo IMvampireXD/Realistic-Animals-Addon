@@ -5,10 +5,14 @@
 			"initial_state": "idle",
 			"states": {
 				"idle": {
-					"animations": [
-						"idle"
-					],
+					"animations": ["idle", "blink"],
 					"transitions": [
+						{
+							"panic": "v.panicking_state == 'panic' && q.modified_move_speed > 0.1"
+						},
+						{
+							"run": "v.panicking_state == 'flee' && q.modified_move_speed > 0.1"
+						},
 						{
 							"walk": "q.modified_move_speed > 0.1"
 						},
@@ -32,6 +36,12 @@
 							"idle": "!(q.modified_move_speed > 0.1)"
 						},
 						{
+							"panic": "v.panicking_state == 'panic'"
+						},
+						{
+							"run": "v.panicking_state == 'flee'"
+						},
+						{
 							"swim": "q.is_swimming"
 						},
 						{
@@ -42,9 +52,17 @@
 				},
 				"swim": {
 					"animations": [
-						"swim"
+						{
+							"swim": "q.modified_move_speed"
+						}
 					],
 					"transitions": [
+						{
+							"panic": "v.panicking_state == 'panic' && q.modified_move_speed > 0.1"
+						},
+						{
+							"run": "v.panicking_state == 'flee' && q.modified_move_speed > 0.1"
+						},
 						{
 							"idle": "!q.is_swimming && !(q.modified_move_speed > 0.1)"
 						},
@@ -66,10 +84,66 @@
 							"idle": "!(q.modified_move_speed > 0.1)"
 						},
 						{
+							"panic": "v.panicking_state == 'panic'"
+						},
+						{
+							"run": "v.panicking_state == 'flee'"
+						},
+						{
 							"swim": "q.is_swimming"
 						},
 						{
 							"walk": "q.modified_move_speed > 0.1"
+						}
+					],
+					"blend_transition": 0.2
+				},
+				"panic": {
+					"animations": [
+						{
+							"panic": "q.modified_move_speed"
+						}
+					],
+					"transitions": [
+						{
+							"idle": "!(q.modified_move_speed > 0.1)"
+						},
+						{
+							"swim": "q.is_swimming && v.panicking_state == 'none'"
+						},
+						{
+							"run": "q.modified_move_speed > 0.1 && v.panicking_state == 'flee'"
+						},
+						{
+							"walk": "q.modified_move_speed > 0.1 && v.panicking_state == 'none'"
+						},
+						{
+							"peck": "q.is_grazing && v.panicking_state == 'none'"
+						}
+					],
+					"blend_transition": 0.2
+				},
+				"run": {
+					"animations": [
+						{
+							"run": "q.modified_move_speed"
+						}
+					],
+					"transitions": [
+						{
+							"idle": "!(q.modified_move_speed > 0.1)"
+						},
+						{
+							"swim": "q.is_swimming && v.panicking_state == 'none'"
+						},
+						{
+							"walk": "q.modified_move_speed > 0.1 && v.panicking_state == 'none'"
+						},
+						{
+							"peck": "q.is_grazing && v.panicking_state == 'none'"
+						},
+						{
+							"panic": "q.modified_move_speed > 0.1 && v.panicking_state == 'panic'"
 						}
 					],
 					"blend_transition": 0.2

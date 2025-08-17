@@ -1,0 +1,52 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "raa:egg",
+      "is_spawnable": false,
+      "is_summonable": true,
+      "is_experimental": false
+    },
+    "component_groups": {
+      "egg": {
+        "minecraft:mark_variant": {
+          "value": 0
+        }
+      }
+    },
+    "components": {
+      "minecraft:health": {
+        "min": 1,
+        "max": 99
+      },
+      "minecraft:physics": {
+        "has_gravity": true,
+        "has_collision": true
+      },
+      "minecraft:collision_box": {
+        "width": 0.1,
+        "height": 0.1
+      },
+      "minecraft:custom_hit_test": {
+        "hitboxes": [
+          {
+            "pivot": [
+              0,
+              0,
+              0
+            ],
+            "width": 0.2,
+            "height": 0.4
+          }
+        ]
+      },
+      "minecraft:damage_sensor": {
+        "triggers": {
+          "cause": "all",
+          "deals_damage": false
+        }
+      }
+    },
+    "events": {}
+  }
+}

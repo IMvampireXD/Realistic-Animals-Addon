@@ -42,7 +42,9 @@
 				},
 				"swim": {
 					"animations": [
-						"swim"
+						{
+							"swim": "q.modified_move_speed"
+						}
 					],
 					"transitions": [
 						{

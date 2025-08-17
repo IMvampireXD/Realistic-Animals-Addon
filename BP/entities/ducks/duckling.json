@@ -93,8 +93,9 @@
 				"can_walk_in_water": true,
 				"avoid_damage_blocks": true,
 				"can_swim": true,
-				"can_breach": true,
-				"can_float": true
+				"can_breach": false,
+				"can_float": true,
+				"can_sink": false
 			},
 			"minecraft:movement.basic": {},
 			"minecraft:jump.static": {},
@@ -134,16 +135,11 @@
 			"minecraft:game_event_movement_tracking": {
 				"emit_flap": true
 			},
-			"minecraft:buoyant": {
-				"base_buoyancy": 1,
-				"apply_gravity": true,
-				"simulate_waves": true,
-				"big_wave_probability": 0.03,
-				"big_wave_speed": 10,
-				"liquid_blocks": [
-					"minecraft:water",
-					"minecraft:flowing_water"
-				]
+			"minecraft:behavior.rise_to_liquid_level": {
+				"priority": 0,
+				"liquid_y_offset": 0.0,
+				"rise_delta": 0.01,
+				"sink_delta": 0.01
 			},
 			"minecraft:behavior.eat_block": {},
 			"minecraft:behavior.avoid_mob_type": {
@@ -193,7 +189,7 @@
 				"speed_multiplier": 1.1
 			},
 			"minecraft:water_movement": {
-				"drag_factor": 0.8
+				"drag_factor": 0.9
 			}
 		},
 		"events": {

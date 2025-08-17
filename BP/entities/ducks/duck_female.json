@@ -5,7 +5,19 @@
 			"identifier": "raa:duck_female",
 			"spawn_category": "creature",
 			"is_spawnable": true,
-			"is_summonable": true
+			"is_summonable": true,
+			"properties": {
+				"raa:panicking_state": {
+					"type": "enum",
+					"values": [
+						"none",
+						"panic",
+						"flee"
+					],
+					"default": "none",
+					"client_sync": true
+				}
+			}
 		},
 		"component_groups": {
 			"minecraft:duck_adult": {
@@ -40,9 +52,21 @@
 				"minecraft:transformation": {
 					"into": "raa:duckling"
 				}
+			},
+			"raa:duck_panic_time": {
+				"minecraft:timer": {
+					"looping": false,
+					"time": 1,
+					"time_down_event": {
+						"event": "raa:duck_panicking_flee"
+					}
+				}
 			}
 		},
 		"components": {
+			"minecraft:scale": {
+				"value": 1.4
+			},
 			"minecraft:is_hidden_when_invisible": {},
 			"minecraft:type_family": {
 				"family": [
@@ -92,13 +116,16 @@
 				"mass": 0.5
 			},
 			"minecraft:navigation.generic": {
+				"can_jump": true,
 				"can_path_over_water": true,
 				"can_walk_in_water": true,
 				"avoid_damage_blocks": true,
 				"can_swim": true,
-				"can_breach": true,
-				"can_float": true
+				"can_breach": false,
+				"can_float": true,
+				"can_sink": false
 			},
+			"minecraft:floats_in_liquid": {},
 			"minecraft:movement.basic": {},
 			"minecraft:jump.static": {},
 			"minecraft:can_climb": {},
@@ -137,16 +164,11 @@
 			"minecraft:game_event_movement_tracking": {
 				"emit_flap": true
 			},
-			"minecraft:buoyant": {
-				"base_buoyancy": 1,
-				"apply_gravity": true,
-				"simulate_waves": true,
-				"big_wave_probability": 0.03,
-				"big_wave_speed": 10,
-				"liquid_blocks": [
-					"minecraft:water",
-					"minecraft:flowing_water"
-				]
+			"minecraft:behavior.rise_to_liquid_level": {
+				"priority": 0,
+				"liquid_y_offset": 0.0,
+				"rise_delta": 0.01,
+				"sink_delta": 0.01
 			},
 			"minecraft:behavior.eat_block": {},
 			"minecraft:behavior.avoid_mob_type": {
@@ -196,7 +218,39 @@
 				"speed_multiplier": 1.1
 			},
 			"minecraft:water_movement": {
-				"drag_factor": 0.8
+				"drag_factor": 0.9
+			},
+			"minecraft:environment_sensor": {
+				"triggers": [
+					{
+						"filters": [
+							{
+								"test": "enum_property",
+								"domain": "raa:panicking_state",
+								"value": "none"
+							},
+							{
+								"test": "is_panicking",
+								"value": true
+							}
+						],
+						"event": "raa:duck_panicking_start"
+					},
+					{
+						"filters": [
+							{
+								"test": "enum_property",
+								"domain": "raa:panicking_state",
+								"value": "flee"
+							},
+							{
+								"test": "is_panicking",
+								"value": false
+							}
+						],
+						"event": "raa:duck_panicking_stop"
+					}
+				]
 			}
 		},
 		"events": {
@@ -229,6 +283,31 @@
 					"component_groups": [
 						"minecraft:duck_baby"
 					]
+				}
+			},
+			"raa:duck_panicking_start": {
+				"set_property": {
+					"raa:panicking_state": "panic"
+				},
+				"add": {
+					"component_groups": [
+						"raa:duck_panic_time"
+					]
+				}
+			},
+			"raa:duck_panicking_flee": {
+				"set_property": {
+					"raa:panicking_state": "flee"
+				},
+				"remove": {
+					"component_groups": [
+						"raa:duck_panic_time"
+					]
+				}
+			},
+			"raa:duck_panicking_stop": {
+				"set_property": {
+					"raa:panicking_state": "none"
 				}
 			}
 		}

@@ -21,12 +21,18 @@
 			},
 			"animations": {
 				"idle": "animation.raa.duck.idle",
+				"blink": "animation.raa.duck.blink",
 				"peck": "animation.raa.duck.peck",
 				"swim": "animation.raa.duck.swim",
 				"walk": "animation.raa.duck.walk",
+				"run": "animation.raa.duck.run",
+				"panic": "animation.raa.duck.panic",
 				"general": "controller.animation.raa.duck.general"
 			},
 			"scripts": {
+				"pre_animation": [
+					"v.panicking_state = q.property('raa:panicking_state');"
+				],
 				"animate": [
 					"general"
 				]
