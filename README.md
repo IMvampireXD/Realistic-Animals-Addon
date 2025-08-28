@@ -45,8 +45,8 @@ If someone wants to help with this project, or has any issues with the addon, pl
 </p>
 
 <p>
-<b>Duck and ducklings models and animations:</b>  
-Slime (Discord → @slimesmc)
+<b>Duck models and animations:</b>  
+Use (Discord → @use_data)
 </p>
 
 <p>
