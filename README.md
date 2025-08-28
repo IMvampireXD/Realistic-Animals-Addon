@@ -60,12 +60,12 @@ here’s a sneak peek at the models and textures of the realistic mobs.
 
 <h2>Male Duck</h2>
 <p>
-<img src="https://cdn.discordapp.com/attachments/1396794001545498666/1396812724519829514/duck9.png" width="100">
+<img src="https://cdn.discordapp.com/attachments/1353599321022660689/1405925133197115474/duck.gif?ex=68b11410&is=68afc290&hm=7e5e26fd047e6690d6833a40b7918bf54bbc4d02202730bbae542c448f7fb3f3&" width="100">
 </p>
 
 <h2>Female Duck</h2>
 <p>
-<img src="https://cdn.discordapp.com/attachments/1396794001545498666/1396818167065743491/duck10.png" width="100">
+<img src="" width="100">
 </p>
 
 <h2>Duckling</h2>
