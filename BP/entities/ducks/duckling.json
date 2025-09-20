@@ -24,7 +24,7 @@
 					]
 				},
 				"minecraft:behavior.follow_parent": {
-					"priority": 2,
+					"priority": 5,
 					"speed_multiplier": 1.1
 				}
 			},
@@ -171,6 +171,30 @@
 				"max_flee": 5,
 				"walk_speed_multiplier": 1.1,
 				"sprint_speed_multiplier": 1.1
+			},
+			"minecraft:behavior.follow_mob": {
+				"priority": 3,
+				"search_range": 10,
+				"stop_distance": 2,
+				"speed_multiplier": 1,
+				"filters": {
+					"all_of": [
+						{
+							"test": "on_ground",
+							"subject": "self",
+							"value": true
+						},
+						{
+							"any_of": [
+								{
+									"test": "is_family",
+									"subject": "other",
+									"value": "adult"
+								}
+							]
+						}
+					]
+				}
 			},
 			"minecraft:behavior.move_to_water": {
 				"priority": 5,

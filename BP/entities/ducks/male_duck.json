@@ -71,6 +71,7 @@
 			"minecraft:type_family": {
 				"family": [
 					"duck",
+					"adult",
 					"mob",
 					"animal"
 				]
