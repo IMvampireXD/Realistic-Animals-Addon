@@ -1,0 +1,32 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.raa.animal.sleep": {
+			"initial_state": "idle",
+			"states": {
+				"idle": {
+					"animations": [ "look_at_target" ],
+					"blend_transition": 0.2,
+					"transitions": [
+						{
+							"sleep": "q.is_sleeping"
+						}
+					]
+				},
+				"sleep": {
+					"blend_transition": 0.2,
+					"particle_effects": [
+						{
+							"effect": "sleep"
+						}
+					],
+					"transitions": [
+						{
+							"idle": "!q.is_sleeping"
+						}
+					]
+				}
+			}
+		}
+	}
+}
