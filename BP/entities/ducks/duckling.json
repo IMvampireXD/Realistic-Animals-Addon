@@ -24,7 +24,7 @@
 					]
 				},
 				"minecraft:behavior.follow_parent": {
-					"priority": 5,
+					"priority": 2,
 					"speed_multiplier": 1.1
 				}
 			},

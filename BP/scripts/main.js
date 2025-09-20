@@ -50,6 +50,7 @@ world.afterEvents.entityHitEntity.subscribe(ev => {
     if (hitEntity.typeId !== "raa:egg" || damagingEntity.typeId !== "minecraft:player") return;
     try {
         hitEntity.remove();
+        damagingEntity.dimension.playSound("random.pop", damagingEntity.location, { volume: 0.5, pitch: 1.1 });
         const inv = damagingEntity.getComponent("inventory")?.container;
         if (inv) inv.addItem(new ItemStack("minecraft:egg", 1));
     } catch { }
