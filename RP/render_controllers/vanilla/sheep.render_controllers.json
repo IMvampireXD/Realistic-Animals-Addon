@@ -14,7 +14,7 @@
       },
       "geometry": "Geometry.default",
       "part_visibility": [
-        { "*wool*": "q.is_sheared" },
+        { "*wool*": "!q.is_sheared" },
         { "*Horn*": "v.is_male" }
       ],
       "materials": [ { "*": "Material.default" } ],

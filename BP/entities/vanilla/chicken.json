@@ -287,27 +287,27 @@
       "minecraft:game_event_movement_tracking": {
         "emit_flap": true
       },
-			"minecraft:environment_sensor": {
-				"triggers": {
-					"filters": [
-						{
-							"test": "is_baby",
-							"value": false
-						},
-						{
-							"test": "bool_property",
-							"domain": "raa:is_male",
-							"value": false
-						},
-						{
-							"test": "has_component",
+      "minecraft:environment_sensor": {
+        "triggers": {
+          "filters": [
+            {
+              "test": "is_baby",
+              "value": false
+            },
+            {
+              "test": "bool_property",
+              "domain": "raa:is_male",
+              "value": false
+            },
+            {
+              "test": "has_component",
               "operator": "!=",
-							"value": "minecraft:spawn_entity"
-						}
-					],
-					"event": "raa:chicken_egg_layer"
-				}
-			}
+              "value": "minecraft:spawn_entity"
+            }
+          ],
+          "event": "raa:chicken_egg_layer"
+        }
+      }
     },
 
     "events": {

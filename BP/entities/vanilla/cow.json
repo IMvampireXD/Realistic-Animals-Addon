@@ -233,27 +233,27 @@
       },
       "minecraft:conditional_bandwidth_optimization": {
       },
-			"minecraft:environment_sensor": {
-				"triggers": {
-					"filters": [
-						{
-							"test": "is_baby",
-							"value": false
-						},
-						{
-							"test": "bool_property",
-							"domain": "raa:is_male",
-							"value": false
-						},
-						{
-							"test": "has_component",
+      "minecraft:environment_sensor": {
+        "triggers": {
+          "filters": [
+            {
+              "test": "is_baby",
+              "value": false
+            },
+            {
+              "test": "bool_property",
+              "domain": "raa:is_male",
+              "value": false
+            },
+            {
+              "test": "has_component",
               "operator": "!=",
-							"value": "minecraft:interact"
-						}
-					],
-					"event": "raa:cow_milkable"
-				}
-			}
+              "value": "minecraft:interact"
+            }
+          ],
+          "event": "raa:cow_milkable"
+        }
+      }
     },
 
     "events": {

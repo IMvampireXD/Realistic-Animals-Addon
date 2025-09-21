@@ -330,6 +330,23 @@
         "is_pushable_by_piston": true
       },
       "minecraft:conditional_bandwidth_optimization": {
+      },
+      "minecraft:environment_sensor": {
+        "triggers": {
+          "filters": [
+            {
+              "test": "is_color",
+              "operator": "!=",
+              "value": "black"
+            },
+            {
+              "test": "int_property",
+              "domain": "raa:variant",
+              "value": 3
+            }
+          ],
+          "event": "raa:dark_sheep_change_color"
+        }
       }
     },
     "events": {
@@ -640,6 +657,11 @@
             }
           }
         ]
+      },
+      "raa:dark_sheep_change_color": {
+        "set_property": {
+          "raa:variant": 1
+        }
       }
     }
   }
