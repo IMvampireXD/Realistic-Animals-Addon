@@ -3,44 +3,45 @@
   "minecraft:client_entity": {
     "description": {
       "identifier": "minecraft:pig",
-      "min_engine_version": "1.8.0",
-      "materials": {
-        "default": "pig_v3"
-      },
+      "min_engine_version": "1.21.0",
+      "materials": { "default": "entity_alphatest" },
       "textures": {
-        "default": "textures/entity/pig/pig_v3",
-        "warm": "textures/entity/pig/pig_warm",
-        "cold": "textures/entity/pig/pig_cold",
+				"black": "textures/raa/entity/pig/black_pig",
+				"brown": "textures/raa/entity/pig/brown_pig",
+				"pale": "textures/raa/entity/pig/pale_pig",
+				"pink": "textures/raa/entity/pig/pink_pig",
+				"splatched": "textures/raa/entity/pig/splatched_pig",
         "saddle": "textures/entity/saddle_v2"
       },
       "geometry": {
-        "default": "geometry.pig.v3"
+        "default": "geometry.raa.pig",
+        "saddle": "geometry.raa.pig.saddle"
       },
       "animations": {
-        "setup": "animation.pig.setup",
-        "walk": "animation.quadruped.walk",
-        "look_at_target": "animation.common.look_at_target",
+        "idle": "animation.raa.pig.idle",
+        "walk": "animation.raa.pig.walk",
+        "run": "animation.raa.pig.run",
+        "eat": "animation.raa.pig.eat",
+        "sleep": "animation.raa.pig.sleep",
+        "look_at_target": "animation.raa.pig.look_at_target",
         "baby_transform": "animation.pig.baby_transform",
-        "sleep_controller": "controller.animation.raa.animal.sleep"
+        "move": "controller.animation.raa.pig.move"
       },
       "scripts": {
         "pre_animation": [
-          "t.variant = query.property('minecraft:climate_variant');",
-          "v.index = (t.variant == 'temperate') ? 0 : ((t.variant == 'warm') ? 1 : 2);"
+          "v.variant = q.property('raa:variant');"
         ],
         "animate": [
-          "setup",
-          "sleep_controller",
-          { "walk": "query.modified_move_speed" },
-          { "baby_transform": "query.is_baby" }
+          "move",
+          { "baby_transform": "q.is_baby" }
         ]
       },
       "particle_effects": {
         "sleep": "raa:sleep_particle"
       },
-      "render_controllers": [ 
-        "controller.render.saddle",
-        "controller.render.pig.v3"
+      "render_controllers": [
+        "controller.render.raa.pig",
+        { "controller.render.raa.pig.saddle": "q.is_saddled" }
       ],
       "spawn_egg": {
         "texture": "spawn_egg_pig"

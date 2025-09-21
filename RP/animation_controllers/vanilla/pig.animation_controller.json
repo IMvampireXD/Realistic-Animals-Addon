@@ -1,0 +1,93 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.raa.pig.move": {
+			"initial_state": "idle",
+			"states": {
+				"idle": {
+					"animations": [ "idle", "look_at_target" ],
+					"blend_transition": 0.2,
+					"transitions": [
+						{
+							"sleep": "q.is_sleeping"
+						},
+						{
+							"eat": "q.is_grazing"
+						},
+						{
+							"run": "q.ground_speed > 3.5"
+						},
+						{
+							"walk": "q.modified_move_speed > 0.1"
+						}
+					]
+				},
+				"walk": {
+					"animations": [
+						{ "walk": "q.modified_move_speed" },
+						"look_at_target"
+					],
+					"transitions": [
+						{
+							"sleep": "q.is_sleeping"
+						},
+						{
+							"eat": "q.is_grazing"
+						},
+						{
+							"idle": "!(q.modified_move_speed > 0.1)"
+						},
+						{
+							"run": "q.ground_speed > 3.5"
+						}
+					],
+					"blend_transition": 0.2
+				},
+				"run": {
+					"animations": [
+						{ "run": "q.modified_move_speed" },
+						"look_at_target"
+					],
+					"transitions": [
+						{
+							"sleep": "q.is_sleeping"
+						},
+						{
+							"eat": "q.is_grazing"
+						},
+						{
+							"idle": "!(q.modified_move_speed > 0.1)"
+						},
+						{
+							"walk": "!(q.ground_speed > 3.3)"
+						}
+					],
+					"blend_transition": 0.2
+				},
+				"eat": {
+					"animations": [ "eat" ],
+					"blend_transition": 0.2,
+					"transitions": [
+						{
+							"idle": "q.all_animations_finished"
+						}
+					]
+				},
+				"sleep": {
+					"animations": [ "sleep" ],
+					"blend_transition": 0.2,
+					"particle_effects": [
+						{
+							"effect": "sleep"
+						}
+					],
+					"transitions": [
+						{
+							"idle": "!q.is_sleeping"
+						}
+					]
+				}
+			}
+		}
+	}
+}

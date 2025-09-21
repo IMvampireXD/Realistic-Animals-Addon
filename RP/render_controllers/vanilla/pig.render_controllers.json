@@ -1,0 +1,26 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.raa.pig": {
+      "arrays": {
+        "textures": {
+          "Array.textures": [
+            "Texture.black",
+            "Texture.brown",
+            "Texture.pale",
+            "Texture.pink",
+            "Texture.splatched"
+          ]
+        }
+      },
+      "geometry": "Geometry.default",
+      "materials": [ { "*": "Material.default" } ],
+      "textures": [ "Array.textures[v.variant]" ]
+    },
+    "controller.render.raa.pig.saddle": {
+      "geometry": "Geometry.saddle",
+      "materials": [ { "*": "Material.default" } ],
+      "textures": [ "Texture.saddle" ]
+    }
+  }
+}

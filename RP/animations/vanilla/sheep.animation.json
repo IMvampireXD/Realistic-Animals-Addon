@@ -1,0 +1,385 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.raa.sheep.walk": {
+			"loop": true,
+			"bones": {
+				"Leg1": {
+					"rotation": ["math.cos(0+q.anim_time*300)*25", 0, 0]
+				},
+				"Tight1": {
+					"rotation": ["math.cos(0+q.anim_time*300)*25", 0, 0]
+				},
+				"Leg2": {
+					"rotation": ["math.cos(0+q.anim_time*300)*-25", 0, 0]
+				},
+				"Tight2": {
+					"rotation": ["math.cos(0+q.anim_time*300)*-25", 0, 0]
+				},
+				"Leg3": {
+					"rotation": ["math.cos(0+q.anim_time*300)*-25", 0, 0]
+				},
+				"Tight3": {
+					"rotation": ["math.cos(0+q.anim_time*300)*-25", 0, 0]
+				},
+				"Leg4": {
+					"rotation": ["math.cos(0+q.anim_time*300)*25", 0, 0]
+				},
+				"Tight4": {
+					"rotation": ["math.cos(0+q.anim_time*300)*25", 0, 0]
+				},
+				"Body": {
+					"rotation": ["math.cos(0+q.anim_time*300)*-2.5", 0, 0]
+				},
+				"head": {
+					"rotation": ["math.cos(0+q.anim_time*300)*-10", 0, 0]
+				}
+			}
+		},
+		"animation.raa.sheep.run": {
+			"loop": true,
+			"bones": {
+				"Leg1": {
+					"rotation": ["math.cos(0+q.anim_time*800)*40", 0, 0]
+				},
+				"Tight1": {
+					"rotation": ["math.cos(0+q.anim_time*800)*35", 0, 0]
+				},
+				"Leg2": {
+					"rotation": ["math.cos(0+q.anim_time*800)*40", 0, 0]
+				},
+				"Tight2": {
+					"rotation": ["math.cos(0+q.anim_time*800)*35", 0, 0]
+				},
+				"Leg3": {
+					"rotation": ["math.cos(0+q.anim_time*800)*-20", 0, 0]
+				},
+				"Tight3": {
+					"rotation": ["math.cos(0+q.anim_time*800)*-20", 0, 0]
+				},
+				"Leg4": {
+					"rotation": ["math.cos(0+q.anim_time*800)*-20", 0, 0]
+				},
+				"Tight4": {
+					"rotation": ["math.cos(0+q.anim_time*800)*-20", 0, 0]
+				},
+				"Body": {
+					"rotation": ["math.cos(0+q.anim_time*800)*-5", 0, 0],
+					"position": [0, "math.cos(0+q.anim_time*800)*1", 0]
+				},
+				"head": {
+					"rotation": ["math.cos(0+q.anim_time*800)*-20", 0, 0]
+				}
+			}
+		},
+		"animation.raa.sheep.idle": {
+			"loop": true,
+			"bones": {
+				"Body": {
+					"scale": [1, "1+math.cos(0+q.anim_time*50)*0.03", 1]
+				},
+				"head": {
+					"rotation": ["math.cos(0+q.anim_time*50)*-5", 0, 0]
+				}
+			}
+		},
+		"animation.raa.sheep.attack": {
+			"loop": true,
+			"animation_length": 0.5,
+			"bones": {
+				"Body": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.25": [17.5, 0, 0],
+						"0.3333": [-12.5, 0, 0],
+						"0.5": [0, 0, 0]
+					},
+					"position": {
+						"0.0": [0, 0, 0],
+						"0.25": [0, 0, 2],
+						"0.3333": [0, 0, -2],
+						"0.5": [0, 0, 0]
+					}
+				},
+				"head": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.25": [22.5, 0, 0],
+						"0.3333": [-22.5, 0, 0],
+						"0.5": [0, 0, 0]
+					},
+					"position": {
+						"0.25": [0, 0, 0],
+						"0.3333": [0, 0, 1],
+						"0.5": [0, 0, 0]
+					}
+				}
+			}
+		},
+		"animation.raa.sheep.eat": {
+			"animation_length": 6.5,
+			"bones": {
+				"Leg2": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.5": [12.5, 0, 0],
+						"6.0": [12.5, 0, 0],
+						"6.5": [0, 0, 0]
+					},
+					"position": {
+						"0.0": [0, 0, 0],
+						"0.5": [0, -2, -1],
+						"6.0": [0, -2, -1],
+						"6.5": [0, 0, 0]
+					}
+				},
+				"Tight2": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.5": [22.5, 0, 0],
+						"6.0": [22.5, 0, 0],
+						"6.5": [0, 0, 0]
+					}
+				},
+				"Body": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.5": [20, 0, 0],
+						"6.0": [20, 0, 0],
+						"6.5": [0, 0, 0]
+					},
+					"position": {
+						"0.0": [0, 0, 0],
+						"0.5": [0, 0, 3],
+						"6.0": [0, 0, 3],
+						"6.5": [0, 0, 0]
+					}
+				},
+				"head": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.5": ["37.5+math.sin(q.anim_time*800)*5", 0, 0],
+						"6.0": ["37.5+math.sin(q.anim_time*800)*5", 0, 0],
+						"6.5": [0, 0, 0]
+					},
+					"position": {
+						"0.0": [0, 0, 0],
+						"0.5": [0, -2, -1],
+						"6.0": [0, -2, -1],
+						"6.5": [0, 0, 0]
+					}
+				}
+			}
+		},
+		"animation.raa.sheep.sleep": {
+			"loop": true,
+			"bones": {
+				"Leg1": {
+					"rotation": [-90, 0, 0],
+					"position": [0, -7, 2]
+				},
+				"Leg2": {
+					"rotation": [-90, 0, 0],
+					"position": [0, -7, 2]
+				},
+				"Leg3": {
+					"rotation": [-92.52154, -7.49282, -0.32902],
+					"position": [1, -8, 2]
+				},
+				"Leg4": {
+					"rotation": [-92.52154, 7.49282, -0.32902],
+					"position": [-1, -8, 2]
+				},
+				"Body": {
+					"position": [0, -5, 0]
+				},
+				"head": {
+					"rotation": [19.96453, 2.17373, 24.42561],
+					"position": [0, -3, 0]
+				}
+			}
+		},
+		"animation.raa.sheep.resting": {
+			"loop": true,
+			"bones": {
+				"Leg1": {
+					"rotation": [-90, 0, 0],
+					"position": [0, -7, 2]
+				},
+				"Leg2": {
+					"rotation": [-90, 0, 0],
+					"position": [0, -7, 2]
+				},
+				"Leg3": {
+					"rotation": [-92.52154, -7.49282, -0.32902],
+					"position": [1, -8, 2]
+				},
+				"Leg4": {
+					"rotation": [-92.52154, 7.49282, -0.32902],
+					"position": [-1, -8, 2]
+				},
+				"Body": {
+					"position": [0, -5, 0]
+				}
+			}
+		},
+		"animation.raa.sheep.inspect": {
+			"animation_length": 4.25,
+			"bones": {
+				"Body": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.25": [-5, 0, 0],
+						"4.0": [-5, 0, 0],
+						"4.25": [0, 0, 0]
+					},
+					"position": {
+						"0.0": [0, 0, 0],
+						"0.25": [0, 0, -1],
+						"4.0": [0, 0, -1],
+						"4.25": [0, 0, 0]
+					}
+				},
+				"head": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.25": [-10, 10, 0],
+						"2.0": [-10, 10, 0],
+						"2.25": [-10, -10, 0],
+						"4.0": [-10, -10, 0],
+						"4.25": [0, 0, 0]
+					}
+				}
+			}
+		},
+		"animation.raa.sheep.scratching": {
+			"animation_length": 3.5,
+			"bones": {
+				"Body": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"2.5": [-10, 0, 0],
+						"3.5": [0, 0, 0]
+					},
+					"position": {
+						"0.0": [0, 0, 0],
+						"2.5": [0, 0, -3],
+						"3.5": [0, 0, 0]
+					}
+				},
+				"head": {
+					"rotation": {
+						"0.0": [0, 0, "math.sin(q.anim_time*800)*15"],
+						"2.5": [-30, 0, "math.sin(q.anim_time*800)*15"],
+						"3.5": [0, 0, 0]
+					}
+				},
+				"Ear1": {
+					"rotation": {
+						"0.0": [0, "math.sin(q.anim_time*800)*15", 0],
+						"2.5": [0, "math.sin(q.anim_time*800)*15", 0],
+						"3.5": [0, 0, 0]
+					}
+				},
+				"Ear2": {
+					"rotation": {
+						"0.0": [0, "math.sin(q.anim_time*800)*15", 0],
+						"2.5": [0, "math.sin(q.anim_time*800)*15", 0],
+						"3.5": [0, 0, 0]
+					}
+				}
+			}
+		},
+		"animation.raa.sheep.dead": {
+			"loop": true,
+			"bones": {
+				"Sheep": {
+					"rotation": [0, 0, 90],
+					"position": [-6, 4, 0]
+				},
+				"Leg1": {
+					"rotation": [-17.43745, -1.50179, -4.76968]
+				},
+				"Tight1": {
+					"rotation": [27.5, 0, 0]
+				},
+				"Leg2": {
+					"rotation": [-38.40686, -10.58927, -17.06488]
+				},
+				"Tight2": {
+					"rotation": [0, 0, -27.5]
+				},
+				"Leg3": {
+					"rotation": [14.98637, 0.64686, -2.41492]
+				},
+				"Leg4": {
+					"rotation": [-7.75279, 1.93597, -14.87739]
+				},
+				"Tight4": {
+					"rotation": [0, 0, -47.5]
+				},
+				"Body": {
+					"rotation": [-12.5, 0, 0],
+					"position": [0, 0, -2]
+				},
+				"head": {
+					"rotation": [26.05573, -15.81499, -7.59001]
+				}
+			}
+		},
+		"animation.raa.sheep.Tpose2": {
+			"loop": true,
+			"bones": {
+				"Leg1": {
+					"rotation": [-90, 0, 0],
+					"position": [0, -7, 2]
+				},
+				"Leg2": {
+					"rotation": [-90, 0, 0],
+					"position": [0, -7, 2]
+				},
+				"Leg3": {
+					"rotation": [-92.52154, -7.49282, -0.32902],
+					"position": [1, -8, 2]
+				},
+				"Leg4": {
+					"rotation": [-92.52154, 7.49282, -0.32902],
+					"position": [-1, -8, 2]
+				},
+				"Body": {
+					"position": [0, -5, 0]
+				}
+			}
+		},
+		"animation.raa.sheep.Tpose3": {
+			"loop": true,
+			"bones": {
+				"Body": {
+					"rotation": [-10, 0, 0],
+					"position": [0, 0, -3]
+				},
+				"head": {
+					"rotation": [-30, 0, 10]
+				},
+				"Ear1": {
+					"rotation": [0, 15, 0]
+				},
+				"Ear2": {
+					"rotation": [0, 15, 0]
+				}
+			}
+		},
+		"animation.raa.sheep.Tpose4": {
+			"loop": true,
+			"bones": {
+				"Body": {
+					"rotation": [-5, 0, 0],
+					"position": [0, 0, -1]
+				},
+				"head": {
+					"rotation": [-10, 10, 0]
+				}
+			}
+		}
+	}
+}

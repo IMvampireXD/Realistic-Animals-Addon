@@ -1,0 +1,24 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.raa.chicken": {
+      "arrays": {
+        "textures": {
+          "Array.hen_textures": [
+            "Texture.black_hen",
+            "Texture.brown_hen",
+            "Texture.white_hen"
+          ],
+          "Array.rooster_textures": [
+            "Texture.brown_rooster",
+            "Texture.perdiz_rooster",
+            "Texture.white_rooster"
+          ]
+        }
+      },
+      "geometry": "Geometry.default",
+      "materials": [ { "*": "Material.default" } ],
+      "textures": [ "q.is_baby ? Texture.chick : v.is_male ? Array.rooster_textures[v.variant] : Array.hen_textures[v.variant]" ]
+    }
+  }
+}

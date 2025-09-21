@@ -1,0 +1,24 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.raa.sheep": {
+      "arrays": {
+        "textures": {
+          "Array.textures": [
+            "Texture.beige",
+            "Texture.black",
+            "Texture.white",
+            "Texture.dark"
+          ]
+        }
+      },
+      "geometry": "Geometry.default",
+      "part_visibility": [
+        { "*wool*": "q.is_sheared" },
+        { "*Horn*": "v.is_male" }
+      ],
+      "materials": [ { "*": "Material.default" } ],
+      "textures": [ "Array.textures[v.variant]" ]
+    }
+  }
+}

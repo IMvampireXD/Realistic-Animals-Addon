@@ -3,46 +3,45 @@
   "minecraft:client_entity": {
     "description": {
       "identifier": "minecraft:chicken",
-      "min_engine_version": "1.12.0",
-      "materials": {
-        "default": "chicken",
-        "cold": "chicken_cold",
-        "legs": "chicken_legs"
-      },
+      "min_engine_version": "1.21.0",
+      "materials": { "default": "entity_alphatest" },
       "textures": {
-        "default": "textures/entity/chicken/chicken",
-        "warm": "textures/entity/chicken/chicken_warm",
-        "cold": "textures/entity/chicken/chicken_cold"
+				"black_hen": "textures/raa/entity/chicken/hen/black_hen",
+				"brown_hen": "textures/raa/entity/chicken/hen/brown_hen",
+				"white_hen": "textures/raa/entity/chicken/hen/white_hen",
+				"brown_rooster": "textures/raa/entity/chicken/rooster/brown_rooster",
+				"perdiz_rooster": "textures/raa/entity/chicken/rooster/perdiz_rooster",
+				"white_rooster": "textures/raa/entity/chicken/rooster/white_rooster",
+				"chick": "textures/raa/entity/chicken/chick"
       },
       "geometry": {
-        "default": "geometry.chicken.v1.12",
-        "warm": "geometry.chicken.v1.12",
-        "cold": "geometry.chicken.cold"
+        "default": "geometry.raa.chicken"
       },
       "animations": {
-        "move": "animation.chicken.move",
-        "general": "animation.chicken.general",
-        "look_at_target": "animation.common.look_at_target",
+        "idle": "animation.raa.chicken.idle",
+        "walk": "animation.raa.chicken.walk",
+        "run": "animation.raa.chicken.run",
+        "fly": "animation.raa.chicken.fly",
+        "eat": "animation.raa.chicken.eat",
+        "sleep": "animation.raa.chicken.sleep",
+        "look_at_target": "animation.raa.chicken.look_at_target",
         "baby_transform": "animation.chicken.baby_transform",
-        "sleep_controller": "controller.animation.raa.animal.sleep"
+        "move": "controller.animation.raa.chicken.move"
       },
       "scripts": {
         "pre_animation": [
-          "t.variant = query.property('minecraft:climate_variant');",
-          "v.index = (t.variant == 'temperate') ? 0 : ((t.variant == 'warm') ? 1 : 2);",
-          "v.is_cold = t.variant == 'cold';"
+          "v.variant = q.property('raa:variant');",
+          "v.is_male = q.property('raa:is_male');"
         ],
         "animate": [
-          "general",
-          "sleep_controller",
-          { "move": "query.modified_move_speed" },
-          { "baby_transform": "query.is_baby" }
+          "move",
+          { "baby_transform": "q.is_baby" }
         ]
       },
       "particle_effects": {
         "sleep": "raa:sleep_particle"
       },
-      "render_controllers": [ "controller.render.chicken.v2" ],
+      "render_controllers": [ "controller.render.raa.chicken" ],
       "spawn_egg": {
         "texture": "spawn_egg_chicken"
       }

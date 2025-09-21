@@ -3,36 +3,41 @@
   "minecraft:client_entity": {
     "description": {
       "identifier": "minecraft:sheep",
-      "min_engine_version": "1.8.0",
+      "min_engine_version": "1.21.0",
       "materials": { "default": "sheep" },
       "textures": {
-        "default": "textures/entity/sheep/sheep"
+				"beige": "textures/raa/entity/sheep/beige_sheep",
+				"black": "textures/raa/entity/sheep/black_sheep",
+				"white": "textures/raa/entity/sheep/white_sheep",
+				"dark": "textures/raa/entity/sheep/dark_sheep"
       },
       "geometry": {
-        "default": "geometry.sheep.v1.8",
-        "sheared": "geometry.sheep.sheared.v1.8"
+        "default": "geometry.raa.sheep"
       },
       "animations": {
-        "setup": "animation.sheep.setup",
-        "grazing": "animation.sheep.grazing",
-        "walk": "animation.quadruped.walk",
+        "idle": "animation.raa.sheep.idle",
+        "walk": "animation.raa.sheep.walk",
+        "run": "animation.raa.sheep.run",
+        "eat": "animation.raa.sheep.eat",
+        "sleep": "animation.raa.sheep.sleep",
         "look_at_target": "animation.common.look_at_target",
         "baby_transform": "animation.sheep.baby_transform",
-        "move": "controller.animation.sheep.move",
-        "sleep_controller": "controller.animation.raa.animal.sleep"
+        "move": "controller.animation.raa.sheep.move"
       },
       "scripts": {
+        "pre_animation": [
+          "v.variant = q.property('raa:variant');",
+          "v.is_male = q.property('raa:is_male');"
+        ],
         "animate": [
-          "setup",
           "move",
-          "sleep_controller",
-          { "baby_transform": "query.is_baby" }
+          { "baby_transform": "q.is_baby" }
         ]
       },
       "particle_effects": {
         "sleep": "raa:sleep_particle"
       },
-      "render_controllers": [ "controller.render.sheep" ],
+      "render_controllers": [ "controller.render.raa.sheep" ],
       "spawn_egg": {
         "texture": "spawn_egg_sheep"
       }

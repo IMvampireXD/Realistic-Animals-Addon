@@ -1,0 +1,528 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.raa.chicken",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 4,
+				"visible_bounds_height": 2.5,
+				"visible_bounds_offset": [
+					0,
+					0.75,
+					0
+				]
+			},
+			"bones": [
+				{
+					"name": "chicken",
+					"pivot": [
+						0,
+						0,
+						0
+					]
+				},
+				{
+					"name": "Leg1",
+					"parent": "chicken",
+					"pivot": [
+						-2,
+						2,
+						0.5
+					],
+					"cubes": [
+						{
+							"origin": [
+								-2.5,
+								0,
+								0
+							],
+							"size": [
+								1,
+								2,
+								1
+							],
+							"uv": [
+								38,
+								38
+							]
+						}
+					]
+				},
+				{
+					"name": "Foot1",
+					"parent": "Leg1",
+					"pivot": [
+						-2,
+						0,
+						0.5
+					],
+					"cubes": [
+						{
+							"origin": [
+								-3.5,
+								0.01,
+								-1
+							],
+							"size": [
+								3,
+								0,
+								3
+							],
+							"uv": [
+								34,
+								23
+							]
+						}
+					]
+				},
+				{
+					"name": "Leg2",
+					"parent": "chicken",
+					"pivot": [
+						2,
+						2,
+						0.5
+					],
+					"cubes": [
+						{
+							"origin": [
+								1.5,
+								0,
+								0
+							],
+							"size": [
+								1,
+								2,
+								1
+							],
+							"uv": [
+								16,
+								39
+							]
+						}
+					]
+				},
+				{
+					"name": "Foot2",
+					"parent": "Leg2",
+					"pivot": [
+						2,
+						0,
+						0.5
+					],
+					"cubes": [
+						{
+							"origin": [
+								0.5,
+								0.01,
+								-1
+							],
+							"size": [
+								3,
+								0,
+								3
+							],
+							"uv": [
+								34,
+								26
+							]
+						}
+					]
+				},
+				{
+					"name": "Body",
+					"parent": "chicken",
+					"pivot": [
+						0,
+						2,
+						0.5
+					],
+					"cubes": [
+						{
+							"origin": [
+								-3,
+								2,
+								-4
+							],
+							"size": [
+								6,
+								6,
+								9
+							],
+							"uv": [
+								0,
+								0
+							]
+						}
+					],
+					"locators": {
+						"bodyP": [
+							0,
+							6,
+							0
+						]
+					}
+				},
+				{
+					"name": "Tail",
+					"parent": "Body",
+					"pivot": [
+						0,
+						8,
+						5
+					],
+					"cubes": [
+						{
+							"origin": [
+								-2.5,
+								3,
+								5
+							],
+							"size": [
+								5,
+								5,
+								4
+							],
+							"pivot": [
+								0,
+								8,
+								5
+							],
+							"rotation": [
+								-7.5,
+								0,
+								0
+							],
+							"uv": [
+								30,
+								0
+							]
+						}
+					],
+					"locators": {
+						"tailP": [
+							0,
+							5,
+							7
+						]
+					}
+				},
+				{
+					"name": "Rooster_tail",
+					"parent": "Tail",
+					"pivot": [
+						0,
+						6,
+						7
+					],
+					"rotation": [
+						-15,
+						0,
+						0
+					],
+					"cubes": [
+						{
+							"origin": [
+								0,
+								3,
+								7
+							],
+							"size": [
+								0,
+								10,
+								8
+							],
+							"uv": [
+								0,
+								15
+							]
+						}
+					]
+				},
+				{
+					"name": "Wing1",
+					"parent": "Body",
+					"pivot": [
+						-3,
+						7,
+						0.5
+					],
+					"cubes": [
+						{
+							"origin": [
+								-4,
+								3,
+								-3.5
+							],
+							"size": [
+								1,
+								4,
+								8
+							],
+							"uv": [
+								16,
+								15
+							]
+						}
+					]
+				},
+				{
+					"name": "Wing2",
+					"parent": "Body",
+					"pivot": [
+						3,
+						7,
+						0.5
+					],
+					"cubes": [
+						{
+							"origin": [
+								3,
+								3,
+								-3.5
+							],
+							"size": [
+								1,
+								4,
+								8
+							],
+							"uv": [
+								16,
+								27
+							]
+						}
+					]
+				},
+				{
+					"name": "Neck1",
+					"parent": "Body",
+					"pivot": [
+						0,
+						7,
+						-3
+					],
+					"cubes": [
+						{
+							"origin": [
+								-2,
+								4,
+								-5
+							],
+							"size": [
+								4,
+								5,
+								4
+							],
+							"uv": [
+								0,
+								33
+							]
+						}
+					]
+				},
+				{
+					"name": "Neck2",
+					"parent": "Neck1",
+					"pivot": [
+						0,
+						9,
+						-3
+					],
+					"cubes": [
+						{
+							"origin": [
+								-1.5,
+								8,
+								-4.5
+							],
+							"size": [
+								3,
+								4,
+								3
+							],
+							"inflate": -0.01,
+							"uv": [
+								34,
+								16
+							]
+						}
+					],
+					"locators": {
+						"leash": [
+							0,
+							8,
+							-5
+						]
+					}
+				},
+				{
+					"name": "Head",
+					"parent": "Neck2",
+					"pivot": [
+						0,
+						11,
+						-3
+					],
+					"cubes": [
+						{
+							"origin": [
+								-1.5,
+								11,
+								-5.5
+							],
+							"size": [
+								3,
+								3,
+								4
+							],
+							"uv": [
+								34,
+								9
+							]
+						},
+						{
+							"origin": [
+								-0.5,
+								12,
+								-7.5
+							],
+							"size": [
+								1,
+								1,
+								2
+							],
+							"pivot": [
+								0,
+								13,
+								-5.5
+							],
+							"rotation": [
+								10,
+								0,
+								0
+							],
+							"uv": [
+								34,
+								35
+							]
+						}
+					],
+					"locators": {
+						"headP": [
+							0,
+							12,
+							-3
+						],
+						"statusBar": [
+							0,
+							14,
+							-3.5
+						]
+					}
+				},
+				{
+					"name": "Comb",
+					"parent": "Head",
+					"pivot": [
+						0,
+						12,
+						-6
+					],
+					"cubes": [
+						{
+							"origin": [
+								0.3,
+								9,
+								-6.5
+							],
+							"size": [
+								0,
+								3,
+								2
+							],
+							"pivot": [
+								0.5,
+								12,
+								-6.5
+							],
+							"rotation": [
+								12.5,
+								0,
+								0
+							],
+							"uv": [
+								30,
+								9
+							]
+						},
+						{
+							"origin": [
+								-0.3,
+								9,
+								-6.5
+							],
+							"size": [
+								0,
+								3,
+								2
+							],
+							"pivot": [
+								-0.5,
+								12,
+								-6.5
+							],
+							"rotation": [
+								12.5,
+								0,
+								0
+							],
+							"uv": [
+								34,
+								38
+							]
+						}
+					]
+				},
+				{
+					"name": "Crest",
+					"parent": "Head",
+					"pivot": [
+						0,
+						14,
+						-4
+					],
+					"cubes": [
+						{
+							"origin": [
+								0,
+								14,
+								-4.7
+							],
+							"size": [
+								0,
+								3,
+								3
+							],
+							"pivot": [
+								0,
+								15,
+								-5.5
+							],
+							"rotation": [
+								-20,
+								0,
+								0
+							],
+							"uv": [
+								34,
+								29
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}

@@ -5,7 +5,20 @@
       "identifier": "minecraft:sheep",
       "spawn_category": "creature",
       "is_spawnable": true,
-      "is_summonable": true
+      "is_summonable": true,
+      "properties": {
+        "raa:variant": {
+          "type": "int",
+          "range": [ 0, 3 ],
+          "default": "math.random_integer(0, 2)",
+          "client_sync": true
+        },
+        "raa:is_male": {
+          "type": "bool",
+          "default": "math.random_integer(0, 1)",
+          "client_sync": true
+        }
+      }
     },
     "component_groups": {
       "minecraft:loot_sheared": {
@@ -274,7 +287,7 @@
       "minecraft:behavior.eat_block": {
         "priority": 6,
         "success_chance": "query.is_baby ? 0.02 : 0.001",
-        "time_until_eat": 1.8,
+        "time_until_eat": 6.0,
         "eat_and_replace_block_pairs": [
           {
             "eat_block": "grass",
@@ -479,6 +492,9 @@
               "component_groups": [
                 "minecraft:sheep_black"
               ]
+            },
+            "set_property": {
+              "raa:variant": "math.random_integer(0, 1) ? 3 : q.property('raa:variant')"
             }
           },
           {
@@ -523,6 +539,9 @@
               "component_groups": [
                 "minecraft:sheep_black"
               ]
+            },
+            "set_property": {
+              "raa:variant": "math.random_integer(0, 1) ? 3 : q.property('raa:variant')"
             }
           },
           {
@@ -607,6 +626,9 @@
               "component_groups": [
                 "minecraft:sheep_black"
               ]
+            },
+            "set_property": {
+              "raa:variant": "math.random_integer(0, 1) ? 3 : q.property('raa:variant')"
             }
           },
           {

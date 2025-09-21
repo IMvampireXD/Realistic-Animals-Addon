@@ -3,45 +3,43 @@
   "minecraft:client_entity": {
     "description": {
       "identifier": "minecraft:cow",
-      "min_engine_version": "1.8.0",
-      "materials": {
-        "default": "cow",
-        "cold": "cow_cold"
-      },
+      "min_engine_version": "1.21.0",
+      "materials": { "default": "entity_alphatest" },
       "textures": {
-        "default": "textures/entity/cow/cow_v2",
-        "warm": "textures/entity/cow/cow_warm",
-        "cold": "textures/entity/cow/cow_cold"
+				"black": "textures/raa/entity/cow/black_cattle",
+				"brown": "textures/raa/entity/cow/brown_cattle",
+				"brown_spotted": "textures/raa/entity/cow/brown_spotted_cattle",
+				"cream": "textures/raa/entity/cow/cream_cattle",
+				"dairy": "textures/raa/entity/cow/dairy_cattle",
+				"white": "textures/raa/entity/cow/white_cattle"
       },
       "geometry": {
-        "default": "geometry.cow.v2",
-        "warm": "geometry.cow.warm",
-        "cold": "geometry.cow.cold"
+        "default": "geometry.raa.cow"
       },
       "animations": {
-        "setup": "animation.cow.setup",
-        "walk": "animation.quadruped.walk",
-        "look_at_target": "animation.common.look_at_target",
+        "idle": "animation.raa.cow.idle",
+        "walk": "animation.raa.cow.walk",
+        "run": "animation.raa.cow.run",
+        "eat": "animation.raa.cow.eat",
+        "sleep": "animation.raa.cow.sleep",
+        "look_at_target": "animation.raa.cow.look_at_target",
         "baby_transform": "animation.cow.baby_transform",
-        "sleep_controller": "controller.animation.raa.animal.sleep"
+        "move": "controller.animation.raa.cow.move"
       },
       "scripts": {
         "pre_animation": [
-          "t.variant = query.property('minecraft:climate_variant');",
-          "v.index = (t.variant == 'temperate') ? 0 : ((t.variant == 'warm') ? 1 : 2);",
-          "v.is_cold = t.variant == 'cold';"
+          "v.variant = q.property('raa:variant');",
+          "v.is_male = q.property('raa:is_male');"
         ],
         "animate": [
-          "setup",
-          "sleep_controller",
-          { "walk": "query.modified_move_speed" },
-          { "baby_transform": "query.is_baby" }
+          "move",
+          { "baby_transform": "q.is_baby" }
         ]
       },
       "particle_effects": {
         "sleep": "raa:sleep_particle"
       },
-      "render_controllers": [ "controller.render.cow.v2" ],
+      "render_controllers": [ "controller.render.raa.cow" ],
       "spawn_egg": {
         "texture": "spawn_egg_cow"
       }

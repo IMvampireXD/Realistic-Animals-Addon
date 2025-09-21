@@ -1,0 +1,26 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.raa.cow": {
+      "arrays": {
+        "textures": {
+          "Array.textures": [
+            "Texture.black",
+            "Texture.brown",
+            "Texture.brown_spotted",
+            "Texture.cream",
+            "Texture.dairy",
+            "Texture.white"
+          ]
+        }
+      },
+      "geometry": "Geometry.default",
+      "part_visibility": [
+        { "*HornC*": "!q.is_baby && !v.is_male" },
+        { "*HornB*": "!q.is_baby && v.is_male" }
+      ],
+      "materials": [ { "*": "Material.default" } ],
+      "textures": [ "Array.textures[v.variant]" ]
+    }
+  }
+}

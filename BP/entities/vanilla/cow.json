@@ -12,6 +12,17 @@
           "values": [ "temperate", "warm", "cold" ],
           "default": "temperate",
           "client_sync": true
+        },
+        "raa:variant": {
+          "type": "int",
+          "range": [ 0, 5 ],
+          "default": "math.random_integer(0, 5)",
+          "client_sync": true
+        },
+        "raa:is_male": {
+          "type": "bool",
+          "default": "math.random_integer(0, 1)",
+          "client_sync": true
         }
       }
     },
@@ -82,7 +93,9 @@
           "property_inheritance": {
             "minecraft:climate_variant": {}
           }
-        },
+        }
+      },
+      "raa:cow_milkable": {
         "minecraft:interact": {
           "interactions": [
             {
@@ -219,7 +232,28 @@
         "is_pushable_by_piston": true
       },
       "minecraft:conditional_bandwidth_optimization": {
-      }
+      },
+			"minecraft:environment_sensor": {
+				"triggers": {
+					"filters": [
+						{
+							"test": "is_baby",
+							"value": false
+						},
+						{
+							"test": "bool_property",
+							"domain": "raa:is_male",
+							"value": false
+						},
+						{
+							"test": "has_component",
+              "operator": "!=",
+							"value": "minecraft:interact"
+						}
+					],
+					"event": "raa:cow_milkable"
+				}
+			}
     },
 
     "events": {
@@ -301,6 +335,14 @@
         "add": {
           "component_groups": [
             "minecraft:cow_adult"
+          ]
+        }
+      },
+
+      "raa:cow_milkable": {
+        "add": {
+          "component_groups": [
+            "raa:cow_milkable"
           ]
         }
       }

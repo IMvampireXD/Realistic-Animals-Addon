@@ -12,6 +12,17 @@
           "values": [ "temperate", "warm", "cold" ],
           "default": "temperate",
           "client_sync": true
+        },
+        "raa:variant": {
+          "type": "int",
+          "range": [ 0, 2 ],
+          "default": "math.random_integer(0, 2)",
+          "client_sync": true
+        },
+        "raa:is_male": {
+          "type": "bool",
+          "default": "math.random_integer(0, 1)",
+          "client_sync": true
         }
       }
     },
@@ -88,7 +99,10 @@
           "seats": {
             "position": [ 0.0, 0.48, 0.0 ]
           }
-        },
+        }
+      },
+
+      "raa:chicken_egg_layer": {
         "minecraft:spawn_entity": {
           "entities": [
             {
@@ -272,7 +286,28 @@
       },
       "minecraft:game_event_movement_tracking": {
         "emit_flap": true
-      }
+      },
+			"minecraft:environment_sensor": {
+				"triggers": {
+					"filters": [
+						{
+							"test": "is_baby",
+							"value": false
+						},
+						{
+							"test": "bool_property",
+							"domain": "raa:is_male",
+							"value": false
+						},
+						{
+							"test": "has_component",
+              "operator": "!=",
+							"value": "minecraft:spawn_entity"
+						}
+					],
+					"event": "raa:chicken_egg_layer"
+				}
+			}
     },
 
     "events": {
@@ -358,6 +393,14 @@
       "minecraft:hatch_cold": {
         "set_property": {
           "minecraft:climate_variant": "cold"
+        }
+      },
+
+      "raa:chicken_egg_layer": {
+        "add": {
+          "component_groups": [
+            "raa:chicken_egg_layer"
+          ]
         }
       }
     }

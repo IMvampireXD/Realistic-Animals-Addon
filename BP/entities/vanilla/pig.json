@@ -12,6 +12,12 @@
           "values": [ "temperate", "warm", "cold" ],
           "default": "temperate",
           "client_sync": true
+        },
+        "raa:variant": {
+          "type": "int",
+          "range": [ 0, 4 ],
+          "default": "math.random_integer(0, 4)",
+          "client_sync": true
         }
       }
     },

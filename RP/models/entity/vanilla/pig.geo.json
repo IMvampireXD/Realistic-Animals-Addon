@@ -1,0 +1,565 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.raa.pig",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 4,
+				"visible_bounds_height": 2.5,
+				"visible_bounds_offset": [
+					0,
+					0.75,
+					0
+				]
+			},
+			"bones": [
+				{
+					"name": "Pig",
+					"pivot": [
+						0,
+						0,
+						0
+					]
+				},
+				{
+					"name": "Body",
+					"parent": "Pig",
+					"pivot": [
+						0,
+						5,
+						0
+					],
+					"cubes": [
+						{
+							"origin": [
+								-4,
+								5,
+								-7
+							],
+							"size": [
+								8,
+								8,
+								13
+							],
+							"uv": [
+								0,
+								0
+							]
+						},
+						{
+							"origin": [
+								-3.5,
+								5.5,
+								6
+							],
+							"size": [
+								7,
+								7,
+								5
+							],
+							"pivot": [
+								0,
+								12.5,
+								6
+							],
+							"rotation": [
+								-20,
+								0,
+								0
+							],
+							"uv": [
+								24,
+								21
+							]
+						},
+						{
+							"origin": [
+								0,
+								8.85644,
+								10.64979
+							],
+							"size": [
+								0,
+								7,
+								7
+							],
+							"pivot": [
+								-0.499,
+								16.85644,
+								8.64979
+							],
+							"rotation": [
+								-20,
+								0,
+								0
+							],
+							"uv": [
+								42,
+								33
+							]
+						}
+					]
+				},
+				{
+					"name": "Neck",
+					"parent": "Body",
+					"pivot": [
+						0,
+						9.5,
+						-7
+					],
+					"rotation": [
+						7.5,
+						0,
+						0
+					],
+					"cubes": [
+						{
+							"origin": [
+								-3.5,
+								5.5,
+								-10
+							],
+							"size": [
+								7,
+								7,
+								5
+							],
+							"uv": [
+								0,
+								21
+							]
+						}
+					]
+				},
+				{
+					"name": "Head",
+					"parent": "Neck",
+					"pivot": [
+						0,
+						9.5,
+						-10
+					],
+					"cubes": [
+						{
+							"origin": [
+								-3,
+								6,
+								-15
+							],
+							"size": [
+								6,
+								6,
+								6
+							],
+							"uv": [
+								0,
+								33
+							]
+						},
+						{
+							"origin": [
+								-1.5,
+								6,
+								-17
+							],
+							"size": [
+								3,
+								3,
+								2
+							],
+							"uv": [
+								52,
+								47
+							]
+						}
+					]
+				},
+				{
+					"name": "Ear1",
+					"parent": "Head",
+					"pivot": [
+						3,
+						12,
+						-12
+					],
+					"rotation": [
+						0,
+						0,
+						35
+					],
+					"cubes": [
+						{
+							"origin": [
+								2,
+								10.5,
+								-12
+							],
+							"size": [
+								2,
+								4,
+								0
+							],
+							"uv": [
+								48,
+								29
+							]
+						}
+					]
+				},
+				{
+					"name": "Ear2",
+					"parent": "Head",
+					"pivot": [
+						-3,
+						12,
+						-12
+					],
+					"rotation": [
+						0,
+						0,
+						-35
+					],
+					"cubes": [
+						{
+							"origin": [
+								-4,
+								10.5,
+								-12
+							],
+							"size": [
+								2,
+								4,
+								0
+							],
+							"uv": [
+								52,
+								29
+							]
+						}
+					]
+				},
+				{
+					"name": "Tight1",
+					"parent": "Pig",
+					"pivot": [
+						3,
+						10,
+						-4
+					],
+					"cubes": [
+						{
+							"origin": [
+								0.5,
+								4,
+								-6.5
+							],
+							"size": [
+								4,
+								6,
+								4
+							],
+							"pivot": [
+								3,
+								5,
+								-6
+							],
+							"rotation": [
+								-5,
+								0,
+								0
+							],
+							"uv": [
+								42,
+								11
+							]
+						}
+					]
+				},
+				{
+					"name": "Leg1",
+					"parent": "Tight1",
+					"pivot": [
+						2.5,
+						4,
+						-4.5
+					],
+					"cubes": [
+						{
+							"origin": [
+								1,
+								0,
+								-6
+							],
+							"size": [
+								3,
+								5,
+								3
+							],
+							"uv": [
+								40,
+								47
+							]
+						}
+					]
+				},
+				{
+					"name": "Tight2",
+					"parent": "Pig",
+					"pivot": [
+						-2,
+						10,
+						-4
+					],
+					"cubes": [
+						{
+							"origin": [
+								-4.5,
+								4,
+								-6.5
+							],
+							"size": [
+								4,
+								6,
+								4
+							],
+							"pivot": [
+								-2,
+								5,
+								-6
+							],
+							"rotation": [
+								-5,
+								0,
+								0
+							],
+							"uv": [
+								24,
+								44
+							]
+						}
+					]
+				},
+				{
+					"name": "Leg2",
+					"parent": "Tight2",
+					"pivot": [
+						-2.5,
+						4,
+						-4.5
+					],
+					"cubes": [
+						{
+							"origin": [
+								-4,
+								0,
+								-6
+							],
+							"size": [
+								3,
+								5,
+								3
+							],
+							"uv": [
+								48,
+								21
+							]
+						}
+					]
+				},
+				{
+					"name": "Tight3",
+					"parent": "Pig",
+					"pivot": [
+						3,
+						9,
+						6
+					],
+					"cubes": [
+						{
+							"origin": [
+								0.5,
+								5.08534,
+								2.58914
+							],
+							"size": [
+								4,
+								6,
+								5
+							],
+							"pivot": [
+								3,
+								5,
+								6
+							],
+							"rotation": [
+								-10,
+								0,
+								0
+							],
+							"uv": [
+								24,
+								33
+							]
+						}
+					]
+				},
+				{
+					"name": "Leg3",
+					"parent": "Tight3",
+					"pivot": [
+						2.5,
+						5,
+						5.5
+					],
+					"cubes": [
+						{
+							"origin": [
+								1.1,
+								0,
+								3.5
+							],
+							"size": [
+								3,
+								6,
+								3
+							],
+							"uv": [
+								0,
+								45
+							]
+						}
+					]
+				},
+				{
+					"name": "Tight4",
+					"parent": "Pig",
+					"pivot": [
+						-2,
+						11,
+						5
+					],
+					"cubes": [
+						{
+							"origin": [
+								-4.5,
+								5.08534,
+								1.58914
+							],
+							"size": [
+								4,
+								6,
+								5
+							],
+							"pivot": [
+								-2,
+								5,
+								5
+							],
+							"rotation": [
+								-10,
+								0,
+								0
+							],
+							"uv": [
+								42,
+								0
+							]
+						}
+					]
+				},
+				{
+					"name": "Leg4",
+					"parent": "Tight4",
+					"pivot": [
+						-2.5,
+						5,
+						4.5
+					],
+					"cubes": [
+						{
+							"origin": [
+								-4.1,
+								0,
+								2.5
+							],
+							"size": [
+								3,
+								6,
+								3
+							],
+							"uv": [
+								12,
+								45
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"description": {
+				"identifier": "geometry.raa.pig.saddle",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 4,
+				"visible_bounds_height": 2.5,
+				"visible_bounds_offset": [
+					0,
+					0.75,
+					0
+				]
+			},
+			"bones": [
+				{
+					"name": "Pig",
+					"pivot": [
+						0,
+						0,
+						0
+					]
+				},
+				{
+					"name": "Body",
+					"parent": "Pig",
+					"pivot": [
+						0,
+						5,
+						0
+					],
+					"cubes": [
+						{
+							"origin": [
+								-5,
+								13,
+								4
+							],
+							"size": [
+								10,
+								16,
+								8
+							],
+							"inflate": -0.5,
+							"pivot": [
+								0,
+								11,
+								9
+							],
+							"rotation": [
+								90,
+								0,
+								0
+							],
+							"uv": [
+								28,
+								32
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}
