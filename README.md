@@ -15,7 +15,7 @@ If someone wants to help with this project, or has any issues with the addon, pl
   <li>Ducks (male and female variants) and ducklings (baby ducks). ✅</li>
   <li>Chicken feed – spreading into the ground; the chickens will peck and eat the grains one by one.</li>
   <li>Egg hatching system (nests).</li>
-  <li>You can pick up chickens (and then put them in nests maybe).</li>
+  <li>You can pick up chickens (and then put them in nests maybe). ✅</li>
   <li>Chickens lay 3D eggs on the ground. ✅</li>
   <li>Realistic pigs, they’re covered in mud ;-;</li>
   <li>Realistic cows, with wheat chewing/eating animations.</li>
