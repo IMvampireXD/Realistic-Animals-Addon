@@ -1,0 +1,65 @@
+{
+  "format_version": "1.21.90",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "raa:mob_catcher",
+      "is_spawnable": false,
+      "is_summonable": true,
+      "is_experimental": false
+    },
+    "components": {
+      "minecraft:type_family": {
+        "family": [ "raa:mob_catcher", "inanimate" ]
+      },
+      "minecraft:rideable": {
+        "seat_count": 1,
+        "family_types": [
+          "chicken"
+        ],
+        "seats": {
+          "position": [ 0.0, 0.0, 0.0 ],
+          "lock_rider_rotation": 0,
+          "rotate_rider_by": "q.ride_body_y_rotation + 90"
+        }
+      },
+      "minecraft:navigation.generic": {
+        "can_sink": false
+      },
+      "minecraft:collision_box": {
+        "width": 0.0,
+        "height": 0.0
+      },
+      "minecraft:health": {
+        "value": 1.0,
+        "max": 1.0
+      },
+      "minecraft:fire_immune": {
+      },
+      "minecraft:damage_sensor": {
+        "triggers": {
+          "cause": "all",
+          "deals_damage": "no"
+        }
+      },
+      "minecraft:knockback_resistance": {
+        "value": 1.0
+      },
+      "minecraft:rotation_axis_aligned": {
+      },
+      "minecraft:dimension_bound": {
+      },
+      "minecraft:cannot_be_attacked": {
+      },
+      "minecraft:persistent": {
+      },
+      "minecraft:conditional_bandwidth_optimization": {
+      },
+      "minecraft:despawn": {
+        "filters": {
+          "test": "is_riding",
+          "value": false
+        }
+      }
+    }
+  }
+}

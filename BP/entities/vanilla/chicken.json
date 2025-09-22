@@ -226,6 +226,35 @@
       "minecraft:despawn": {
         "despawn_from_distance": {}
       },
+      "minecraft:interact": {
+        "interactions": [
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  { "test": "is_family", "subject": "other", "value": "player" },
+                  { "test": "all_slots_empty", "subject": "other", "value": "hand" },
+                  { "test": "is_vehicle_family", "operator": "!=", "value": "raa:mob_catcher" }
+                ]
+              }
+            },
+            "swing": true,
+            "interact_text": "action.interact.raa.catchMob"
+          },
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  { "test": "is_family", "subject": "other", "value": "player" },
+                  { "test": "is_vehicle_family", "value": "raa:mob_catcher" }
+                ]
+              }
+            },
+            "swing": true,
+            "interact_text": "action.interact.raa.releaseMob"
+          }
+        ]
+      },
       "minecraft:behavior.float": {
         "priority": 0
       },

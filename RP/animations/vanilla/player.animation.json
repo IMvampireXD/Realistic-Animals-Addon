@@ -1,0 +1,17 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.raa.player.carrying_mob": {
+			"loop": true,
+			"override_previous_animation": true,
+			"bones": {
+				"leftArm": {
+					"rotation": [-50, 0, 0]
+				},
+				"rightArm": {
+					"rotation": [-50, 0, 0]
+				}
+			}
+		}
+	}
+}

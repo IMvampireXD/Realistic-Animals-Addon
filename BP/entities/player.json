@@ -5,7 +5,20 @@
 			"identifier": "minecraft:player",
 			"spawn_category": "creature",
 			"is_spawnable": false,
-			"is_summonable": false
+			"is_summonable": false,
+			"properties": {
+				"raa:carrying_mob": {
+					"type": "bool",
+					"default": false,
+					"client_sync": true
+				}
+			},
+			"animations": {
+				"carrying_mob": "controller.animation.player.carrying_mob"
+			},
+			"scripts": {
+				"animate": [ "carrying_mob" ]
+			}
 		},
 		"component_groups": {
 			"minecraft:add_raid_omen": {
@@ -40,6 +53,103 @@
 						"event": "minecraft:remove_raid_trigger",
 						"target": "self"
 					}
+				}
+			},
+			"raa:player_normal": {
+				"minecraft:rideable": {
+					"seat_count": 2,
+					"family_types": [
+						"parrot_tame"
+					],
+					"pull_in_entities": true,
+					"seats": [
+						{
+							"position": [
+								0.4,
+								-0.2,
+								-0.1
+							],
+							"min_rider_count": 0,
+							"max_rider_count": 0,
+							"lock_rider_rotation": 0
+						},
+						{
+							"position": [
+								-0.4,
+								-0.2,
+								-0.1
+							],
+							"min_rider_count": 1,
+							"max_rider_count": 2,
+							"lock_rider_rotation": 0
+						}
+					]
+				}
+			},
+			"raa:player_catching": {
+				"minecraft:rideable": {
+					"seat_count": 3,
+					"family_types": [
+						"parrot_tame",
+						"raa:mob_catcher"
+					],
+					"pull_in_entities": true,
+					"rider_can_interact": true,
+					"seats": [
+						{
+							"position": [
+								-0.1,
+								-0.8,
+								0.5
+							],
+							"min_rider_count": 0,
+							"max_rider_count": 3,
+							"lock_rider_rotation": 0
+						},
+						{
+							"position": [
+								0.4,
+								-0.2,
+								-0.1
+							],
+							"min_rider_count": 0,
+							"max_rider_count": 0,
+							"lock_rider_rotation": 0
+						},
+						{
+							"position": [
+								-0.4,
+								-0.2,
+								-0.1
+							],
+							"min_rider_count": 1,
+							"max_rider_count": 2,
+							"lock_rider_rotation": 0
+						}
+					]
+				},
+				"minecraft:entity_sensor": {
+					"relative_range": false,
+					"subsensors": [
+						{
+							"cooldown": 0.1,
+							"y_offset": 1.0,
+							"range": [ 2.0, 2.0 ],
+							"minimum_count": 0,
+							"maximum_count": 0,
+							"require_all": true,
+							"event_filters": {
+								"none_of": {
+									"all_of": [
+										{ "test": "is_riding_self", "subject": "other", "value": true },
+										{ "test": "is_family", "subject": "other", "value": "raa:mob_catcher" },
+										{ "test": "bool_property", "domain": "raa:carrying_mob" }
+									]
+								}
+							},
+							"event": "raa:player_on_release_mob"
+						}
+					]
 				}
 			}
 		},
@@ -210,6 +320,36 @@
 				"remove": {
 					"component_groups": [
 						"minecraft:raid_trigger"
+					]
+				}
+			},
+			"raa:player_on_catch_mob": {
+				"set_property": {
+					"raa:carrying_mob": true
+				},
+				"remove": {
+					"component_groups": [
+						"raa:player_normal"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"raa:player_catching"
+					]
+				}
+			},
+			"raa:player_on_release_mob": {
+				"set_property": {
+					"raa:carrying_mob": false
+				},
+				"remove": {
+					"component_groups": [
+						"raa:player_catching"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"raa:player_normal"
 					]
 				}
 			}

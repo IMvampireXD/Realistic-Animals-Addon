@@ -1,0 +1,25 @@
+{
+  "format_version": "1.21.90",
+  "animation_controllers": {
+    "controller.animation.player.carrying_mob": {
+      "initial_state": "default",
+      "states": {
+        "default": {
+          "transitions": [
+            {
+              "release_mob": "q.property('raa:carrying_mob') && (!q.is_alive || q.is_swimming || q.is_crawling || q.is_gliding || q.is_emoting)"
+            }
+          ]
+        },
+        "release_mob": {
+          "on_entry": [ "@s raa:player_on_release_mob" ],
+          "transitions": [
+            {
+              "default": "!q.property('raa:carrying_mob')"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

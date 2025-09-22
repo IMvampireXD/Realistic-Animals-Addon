@@ -1,12 +1,17 @@
 import { ItemStack, system, world, Dimension, Entity } from "@minecraft/server";
+import './mechanics/chickenCatcher.js';
 
 world.afterEvents.entityHurt.subscribe((e) => {
     const { hurtEntity } = e;
-    if (hurtEntity.typeId == "minecraft:chicken" || hurtEntity.typeId == "raa:male_duck" || hurtEntity.typeId == "raa:duck_female") {
-        system.run(() => {
-            hurtEntity.dimension.spawnParticle("raa:feather_particle", hurtEntity.location)
-        })
-    }
+    system.run(() => {
+        hurtEntity.dimension.spawnParticle("raa:feather_particle", hurtEntity.location)
+    })
+}, {
+    entityTypes: [
+        "minecraft:chicken",
+        "raa:male_duck",
+        "raa:duck_female"
+    ]
 })
 world.afterEvents.entitySpawn.subscribe(ev => {
     const e = ev.entity;
@@ -47,11 +52,11 @@ world.afterEvents.entitySpawn.subscribe(ev => {
 });
 world.afterEvents.entityHitEntity.subscribe(ev => {
     const { hitEntity, damagingEntity } = ev;
-    if (hitEntity.typeId !== "raa:egg" || damagingEntity.typeId !== "minecraft:player") return;
+    if (hitEntity.typeId !== "raa:egg") return;
     try {
         hitEntity.remove();
         damagingEntity.dimension.playSound("random.pop", damagingEntity.location, { volume: 0.5, pitch: 1.1 });
         const inv = damagingEntity.getComponent("inventory")?.container;
         if (inv) inv.addItem(new ItemStack("minecraft:egg", 1));
     } catch { }
-});
+}, { entityTypes: ["minecraft:player"] });

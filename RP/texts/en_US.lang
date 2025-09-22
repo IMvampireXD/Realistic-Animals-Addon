@@ -1,3 +1,6 @@
+action.interact.raa.catchMob=Catch
+action.interact.raa.releaseMob=Release
+
 item.spawn_egg.entity.raa:male_duck.name=Spawn Duck
 entity.raa:male_duck.name=Duck
 item.raa:duck_raw=Raw Duck
