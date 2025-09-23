@@ -18,7 +18,7 @@ If someone wants to help with this project, or has any issues with the addon, pl
   <li>You can pick up chickens (and then put them in nests maybe). ✅</li>
   <li>Chickens lay 3D eggs on the ground. ✅</li>
   <li>Realistic pigs, they’re covered in mud ;-;</li>
-  <li>Realistic cows, with wheat chewing/eating animations.</li>
+  <li>Realistic cows, with wheat chewing/eating animations, You can extract milk from them using a milk extractor machine and get milk bottles.</li>
   <li>Realistic chickens, they run when players try to catch them :&gt; ✅</li>
   <li>Realistic sheep.</li>
 </ul>
