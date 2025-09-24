@@ -1,5 +1,5 @@
 {
-  "format_version": "1.13.0",
+  "format_version": "1.21.90",
   "minecraft:entity": {
     "description": {
       "identifier": "raa:egg",
@@ -56,8 +56,28 @@
       "minecraft:damage_sensor": {
         "triggers": {
           "cause": "all",
-          "deals_damage": false
+          "deals_damage": "no"
         }
+      },
+      "minecraft:cannot_be_attacked": {
+      },
+      "minecraft:conditional_bandwidth_optimization": {
+      },
+      "minecraft:entity_sensor": {
+        "relative_range": true,
+        "subsensors": [
+          {
+            "cooldown": 0.1,
+            "range": [ 0.25, 0.25 ],
+            "minimum_count": 1,
+            "require_all": false,
+            "event_filters": [
+              { "test": "is_moving", "subject": "other", "value": true },
+              { "test": "on_ground", "value": true }
+            ],
+            "event": "raa:egg_sway"
+          }
+        ]
       }
     },
     "events": {
@@ -73,6 +93,11 @@
           "component_groups": [
             "brown_egg"
           ]
+        }
+      },
+      "raa:egg_sway": {
+        "queue_command": {
+          "command": "playanimation @s animation.raa.egg.sway"
         }
       }
     }
