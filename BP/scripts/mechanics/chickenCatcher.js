@@ -58,3 +58,10 @@ world.afterEvents.dataDrivenEntityTrigger.subscribe(({ entity: player }) => {
   entityTypes: [playerType],
   eventTypes: [playerReleaseEvent]
 });
+
+
+/*
+ * 🦊 Ideas crafted into code by <@JeanLucasMCPE> — 2025
+ * 💬 Questions or feedback? Ping me anytime! 🚀
+ * ------------------------------------------
+ */

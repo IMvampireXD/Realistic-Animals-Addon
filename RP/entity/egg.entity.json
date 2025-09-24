@@ -8,10 +8,12 @@
         "legs": "chicken_legs"
       },
       "textures": {
-        "egg": "textures/entity/egg"
+        "egg": "textures/entity/egg",
+        "blue_egg": "textures/entity/blue_egg",
+        "brown_egg": "textures/entity/brown_egg"
       },
       "geometry": {
-        "egg": "geometry.egg"
+        "egg": "geometry.raa.egg"
       },
       "scripts": {
         "scale": "1.6"

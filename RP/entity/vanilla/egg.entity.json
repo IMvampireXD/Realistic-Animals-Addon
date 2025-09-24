@@ -1,0 +1,27 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "minecraft:egg",
+      "materials": {
+        "default": "egg"
+      },
+      "textures": {
+        "default": "textures/entity/egg",
+        "warm": "textures/entity/brown_egg",
+        "cold": "textures/entity/blue_egg"
+      },
+      "geometry": {
+        "default": "geometry.raa.egg"
+      },
+      "render_controllers": [ "controller.render.egg" ],
+      "scripts": {
+        "pre_animation": [
+          "t.variant = query.property('minecraft:climate_variant');",
+          "v.index = (t.variant == 'temperate') ? 0 : ((t.variant == 'warm') ? 1 : 2);"
+        ],
+        "scale": "1.6"
+      }
+    }
+  }
+} 

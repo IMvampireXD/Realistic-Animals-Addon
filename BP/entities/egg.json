@@ -12,12 +12,25 @@
         "minecraft:mark_variant": {
           "value": 0
         }
+      },
+      "blue_egg": {
+        "minecraft:mark_variant": {
+          "value": 1
+        }
+      },
+      "brown_egg": {
+        "minecraft:mark_variant": {
+          "value": 2
+        }
       }
     },
     "components": {
+      "minecraft:type_family": {
+        "family": [ "inanimate" ]
+      },
       "minecraft:health": {
-        "min": 1,
-        "max": 99
+        "value": 1,
+        "max": 1
       },
       "minecraft:physics": {
         "has_gravity": true,
@@ -47,6 +60,21 @@
         }
       }
     },
-    "events": {}
+    "events": {
+      "raa:blue_egg": {
+        "add": {
+          "component_groups": [
+            "blue_egg"
+          ]
+        }
+      },
+      "raa:brown_egg": {
+        "add": {
+          "component_groups": [
+            "brown_egg"
+          ]
+        }
+      }
+    }
   }
 }

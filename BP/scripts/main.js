@@ -1,5 +1,12 @@
-import { ItemStack, system, world, Dimension, Entity } from "@minecraft/server";
+import { ItemStack, system, world, GameMode, EntityComponentTypes } from "@minecraft/server";
 import './mechanics/chickenCatcher.js';
+
+const eggSpawnEvents = {
+    "minecraft:egg": "",
+    "minecraft:blue_egg": "raa:blue_egg",
+    "minecraft:brown_egg": "raa:brown_egg"
+};
+const eggItemTypes = Object.keys(eggSpawnEvents);
 
 world.afterEvents.entityHurt.subscribe((e) => {
     const { hurtEntity } = e;
@@ -12,7 +19,7 @@ world.afterEvents.entityHurt.subscribe((e) => {
         "raa:male_duck",
         "raa:duck_female"
     ]
-})
+});
 world.afterEvents.entitySpawn.subscribe(ev => {
     const e = ev.entity;
     if (e.typeId !== "minecraft:item") return;
@@ -20,43 +27,22 @@ world.afterEvents.entitySpawn.subscribe(ev => {
     try {
         item = e.getComponent("item")?.itemStack;
     } catch { return; }
-    if (item && item.typeId === "minecraft:egg") {
-        let players;
-        try {
-            players = e.dimension.getEntities({
-                type: "minecraft:player",
-                location: e.location,
-                maxDistance: 2
-            });
-        } catch { return; }
-        if (players.length) {
-            const player = players.find(
-                p => p.getRotation().x === e.getRotation().x &&
-                    p.getRotation().y === e.getRotation().y
-            );
-            if (player) {
-                try {
-                    const eggEntity = e.dimension.spawnEntity("raa:egg", e.location);
-                    const dir = player.getViewDirection();
-                    eggEntity.applyImpulse({ x: dir.x * 0.3, y: dir.y * 0.3, z: dir.z * 0.3 });
-                    e.remove();
-                } catch { }
-                return;
-            }
-        }
-        try {
-            e.dimension.spawnEntity("raa:egg", e.location);
-            e.remove();
-        } catch { }
-    }
+    if (!item) return;
+    const spawnEvent = eggSpawnEvents[item.typeId];
+    if (spawnEvent === undefined) return;
+    try {
+        e.dimension.spawnEntity("raa:egg", e.location, spawnEvent ? { spawnEvent } : undefined).applyImpulse(e.getVelocity());
+        e.remove();
+    } catch { }
 });
 world.afterEvents.entityHitEntity.subscribe(ev => {
     const { hitEntity, damagingEntity } = ev;
     if (hitEntity.typeId !== "raa:egg") return;
     try {
+        const eggType = eggItemTypes[hitEntity.getComponent(EntityComponentTypes.MarkVariant)?.value ?? 0];
+        const inv = damagingEntity.getComponent("inventory")?.container;
+        if (!inv || inv.addItem(new ItemStack(eggType, 1)) && damagingEntity.getGameMode() !== GameMode.Creative) return;
         hitEntity.remove();
         damagingEntity.dimension.playSound("random.pop", damagingEntity.location, { volume: 0.5, pitch: 1.1 });
-        const inv = damagingEntity.getComponent("inventory")?.container;
-        if (inv) inv.addItem(new ItemStack("minecraft:egg", 1));
     } catch { }
 }, { entityTypes: ["minecraft:player"] });

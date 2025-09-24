@@ -39,6 +39,15 @@
             "volume": 0.25
           }
         }
+      },
+      "raa:egg": {
+        "events": {
+          "hurt": "",
+          "death": "",
+          "step": "",
+          "fall.big": "",
+          "fall.small": ""
+        }
       }
     }
   }

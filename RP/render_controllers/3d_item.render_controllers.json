@@ -5,12 +5,16 @@
       "arrays": {
         "geometries": {
           "array.geos": [
+            "geometry.egg",
+            "geometry.egg",
             "geometry.egg"
           ]
         },
         "textures": {
           "Array.skins": [
-            "Texture.egg"
+            "Texture.egg",
+            "Texture.blue_egg",
+            "Texture.brown_egg"
           ]
         }
       },
