@@ -34,7 +34,6 @@ If someone wants to help with this project, or has any issues with the addon, pl
 <ul>
   <li>@Sir Jackster (Discord → @sir3jackster)</li>
   <li>@Jean Lucas (Discord → @jeanlucasmcpe)</li>
-  <li>@Venoct Euphrosyne (Discord → @venoct_euphrosyne)</li>
 </ul>
 </p>
 
@@ -43,10 +42,13 @@ If someone wants to help with this project, or has any issues with the addon, pl
 @Victão Sigma (Discord → victaosigma)  
 (It’s a free-to-use resource <a href="https://discord.com/channels/523663022053392405/1401389263219593350" target="_blank">link</a>)
 </p>
-
 <p>
 <b>Duck models and animations:</b>  
 Use (Discord → @use_data)
+</p>
+<p>
+<b>Chicken Coop, nest model by:</b>  
+HXLLY (Discord → @pxndaxox) and Cahyo (Discord → @misgemingytd)
 </p>
 
 <p>
