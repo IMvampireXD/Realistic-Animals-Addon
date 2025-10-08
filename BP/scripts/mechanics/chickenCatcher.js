@@ -1,4 +1,4 @@
-import { EntityComponentTypes, system, world } from '@minecraft/server';
+import { Entity, EntityComponentTypes, Player, system, world } from '@minecraft/server';
 
 // Implements the player ability to catch chickens in Realistic Animals Add-On.
 
@@ -12,7 +12,7 @@ world.afterEvents.playerInteractWithEntity.subscribe(({ player, target, itemStac
 
   const ridingOn = target.getComponent(EntityComponentTypes.Riding)?.entityRidingOn;
   if (ridingOn?.typeId === mobCatcherType && ridingOn.getComponent(EntityComponentTypes.Riding)?.entityRidingOn === player) {
-    player.triggerEvent(playerReleaseEvent);
+    releaseCaughtChicken(player);
     return;
   }
 
@@ -44,7 +44,7 @@ world.afterEvents.entityHitEntity.subscribe(({ hitEntity, damagingEntity: player
   const ridingOn = hitEntity.getComponent(EntityComponentTypes.Riding)?.entityRidingOn;
   if (ridingOn?.typeId !== mobCatcherType || ridingOn.getComponent(EntityComponentTypes.Riding)?.entityRidingOn !== player) return;
 
-  player.triggerEvent(playerReleaseEvent);
+  releaseCaughtChicken(player);
 }, { entityTypes: [playerType] } );
 
 world.afterEvents.dataDrivenEntityTrigger.subscribe(({ entity: player }) => {
@@ -58,6 +58,26 @@ world.afterEvents.dataDrivenEntityTrigger.subscribe(({ entity: player }) => {
   entityTypes: [playerType],
   eventTypes: [playerReleaseEvent]
 });
+
+/**
+ * Releases the caught chicken from a player, if carrying one.
+ * @param {Player} player The player to release the caught chicken from.
+ */
+export function releaseCaughtChicken(player) {
+  player.triggerEvent(playerReleaseEvent);
+}
+
+/**
+ * Gets the caught chicken from a player, if carrying one.
+ * @param {Player} player The player to get the caught chicken from.
+ * @returns {Entity|undefined} The chicken caught by the player, if carrying one. Otherwise, `undefined`.
+ */
+export function getCaughtChicken(player) {
+  if (!player.getProperty('raa:carrying_mob')) return;
+  const mobCatcher = player.getComponent(EntityComponentTypes.Rideable)?.getRiders()[0];
+  if (mobCatcher?.typeId !== mobCatcherType) return;
+  return mobCatcher.getComponent(EntityComponentTypes.Rideable)?.getRiders()[0];
+}
 
 
 /*

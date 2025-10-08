@@ -1,5 +1,9 @@
 import { ItemStack, system, world, GameMode, EntityComponentTypes } from "@minecraft/server";
-import './mechanics/chickenCatcher.js';
+
+import "./mechanics/chickenCatcher.js";
+
+import { BlockComponents } from "./registry/BlockComponents.js";
+BlockComponents.register();
 
 const eggSpawnEvents = {
     "minecraft:egg": "",

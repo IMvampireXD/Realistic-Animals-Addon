@@ -3,5 +3,8 @@
 		1,
 		1,
 		0
-	]
+	],
+	"raa:nest": {
+		"sound": "grass"
+	}
 }

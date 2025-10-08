@@ -9,3 +9,5 @@ item.spawn_egg.entity.raa:duck_female.name=Spawn Female Duck
 entity.raa:duck_female.name=Female Duck
 item.spawn_egg.entity.raa:duckling.name=Spawn Duckling
 entity.raa:duckling.name=Duckling
+
+tile.raa:nest.name=Nest

@@ -3,5 +3,9 @@
 	"padding": 8,
 	"resource_pack_name": "Realistic Animals Addon",
 	"texture_name": "atlas.terrain",
-	"texture_data": {}
+	"texture_data": {
+		"raa:nest": {
+			"textures": "textures/raa/blocks/nest"
+		}
+	}
 }
