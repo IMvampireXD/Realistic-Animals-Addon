@@ -11,3 +11,4 @@ item.spawn_egg.entity.raa:duckling.name=Spawn Duckling
 entity.raa:duckling.name=Duckling
 
 tile.raa:nest.name=Nest
+tile.raa:feed_container.name=Feed Container

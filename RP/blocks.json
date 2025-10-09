@@ -6,5 +6,8 @@
 	],
 	"raa:nest": {
 		"sound": "grass"
+	},
+	"raa:feed_container": {
+		"sound": "wood"
 	}
 }

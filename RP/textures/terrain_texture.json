@@ -6,6 +6,9 @@
 	"texture_data": {
 		"raa:nest": {
 			"textures": "textures/raa/blocks/nest"
+		},
+		"raa:feed_container": {
+			"textures": "textures/raa/blocks/feed_container"
 		}
 	}
 }
