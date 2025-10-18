@@ -2,6 +2,7 @@ import { system } from '@minecraft/server';
 
 // Block Components
 import { NestBlockComponent } from '../blocks/NestBlockComponent.js';
+import { FeedContainerBlockComponent } from '../blocks/FeedContainerBlockComponent.js';
 
 /**
  * Centralizes the Realistic Animals Add-On block components registry.
@@ -12,7 +13,8 @@ export class BlockComponents {
    * @type {{ COMPONENT_ID: string, new() => import('@minecraft/server').BlockCustomComponent }[]}
    */
   static #components = [
-    NestBlockComponent
+    NestBlockComponent,
+    FeedContainerBlockComponent
   ];
 
   /**
