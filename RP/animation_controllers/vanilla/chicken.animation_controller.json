@@ -15,10 +15,10 @@
 							"eat": "q.is_grazing"
 						},
 						{
-							"fly": "!q.is_on_ground"
+							"panic": "v.panicking_state == 'panic' && q.modified_move_speed > 0.1"
 						},
 						{
-							"run": "q.ground_speed > 3"
+							"run": "v.panicking_state == 'flee' && q.modified_move_speed > 0.1"
 						},
 						{
 							"walk": "q.modified_move_speed > 0.1"
@@ -38,13 +38,13 @@
 							"eat": "q.is_grazing"
 						},
 						{
-							"fly": "!q.is_on_ground"
-						},
-						{
 							"idle": "!(q.modified_move_speed > 0.1)"
 						},
 						{
-							"run": "q.ground_speed > 3"
+							"panic": "v.panicking_state == 'panic' && q.modified_move_speed > 0.1"
+						},
+						{
+							"run": "v.panicking_state == 'flee' && q.modified_move_speed > 0.1"
 						}
 					],
 					"blend_transition": 0.2
@@ -62,18 +62,18 @@
 							"eat": "q.is_grazing"
 						},
 						{
-							"fly": "!q.is_on_ground"
-						},
-						{
 							"idle": "!(q.modified_move_speed > 0.1)"
 						},
 						{
-							"walk": "!(q.ground_speed > 2.8)"
+							"walk": "q.modified_move_speed > 0.1 && v.panicking_state == 'none'"
+						},
+						{
+							"panic": "q.modified_move_speed > 0.1 && v.panicking_state == 'panic'"
 						}
 					],
 					"blend_transition": 0.2
 				},
-				"fly": {
+				"panic": {
 					"animations": [ "fly", "look_at_target" ],
 					"transitions": [
 						{
@@ -83,13 +83,13 @@
 							"eat": "q.is_grazing"
 						},
 						{
-							"walk": "q.is_on_ground && q.modified_move_speed > 0.1"
+							"idle": "!(q.modified_move_speed > 0.1)"
 						},
 						{
-							"run": "q.is_on_ground && q.ground_speed > 3"
+							"run": "v.panicking_state == 'flee' && q.modified_move_speed > 0.1"
 						},
 						{
-							"idle": "q.is_on_ground"
+							"walk": "q.modified_move_speed > 0.1 && v.panicking_state == 'none'"
 						}
 					],
 					"blend_transition": 0.2

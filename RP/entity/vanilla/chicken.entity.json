@@ -31,7 +31,8 @@
       "scripts": {
         "pre_animation": [
           "v.variant = q.property('raa:variant');",
-          "v.is_male = q.property('raa:is_male');"
+          "v.is_male = q.property('raa:is_male');",
+          "v.panicking_state = q.property('raa:panicking_state');"
         ],
         "animate": [
           "move",

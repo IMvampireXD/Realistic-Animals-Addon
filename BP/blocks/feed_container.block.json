@@ -4,7 +4,8 @@
     "description": {
       "identifier": "raa:feed_container",
       "states": {
-        "raa:part": [ "left", "right" ]
+        "raa:part": [ "left", "right" ],
+        "raa:filled": [ false, true ]
       },
       "traits": {
         "minecraft:placement_direction": {
@@ -31,7 +32,10 @@
       "minecraft:map_color": [102, 76, 51],
       "minecraft:light_dampening": 0,
       "minecraft:geometry": {
-        "identifier": "geometry.raa.block.feed_container_left"
+        "identifier": "geometry.raa.block.feed_container_left",
+        "bone_visibility": {
+          "feed": "q.block_state('raa:filled')"
+        }
       },
       "minecraft:material_instances": {
         "*": {
@@ -94,7 +98,10 @@
         "condition": "q.block_state('raa:part') == 'right'",
         "components": {
           "minecraft:geometry": {
-            "identifier": "geometry.raa.block.feed_container_right"
+            "identifier": "geometry.raa.block.feed_container_right",
+            "bone_visibility": {
+              "feed": "q.block_state('raa:filled')"
+            }
           },
           "minecraft:collision_box": {
             "origin": [-8, 0, -6],

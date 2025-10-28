@@ -5,6 +5,7 @@ item.spawn_egg.entity.raa:male_duck.name=Spawn Duck
 entity.raa:male_duck.name=Duck
 item.raa:duck_raw=Raw Duck
 item.raa:duck_cooked=Cooked Duck
+item.raa:chicken_feed=Chicken Feed
 item.spawn_egg.entity.raa:duck_female.name=Spawn Female Duck
 entity.raa:duck_female.name=Female Duck
 item.spawn_egg.entity.raa:duckling.name=Spawn Duckling

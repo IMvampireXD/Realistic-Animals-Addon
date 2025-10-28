@@ -23,6 +23,16 @@
           "type": "bool",
           "default": "math.random_integer(0, 1)",
           "client_sync": true
+        },
+        "raa:panicking_state": {
+          "type": "enum",
+          "values": [
+            "none",
+            "panic",
+            "flee"
+          ],
+          "default": "none",
+          "client_sync": true
         }
       }
     },
@@ -166,6 +176,15 @@
               ]
             }
           ]
+        }
+      },
+      "raa:chicken_panic_time": {
+        "minecraft:timer": {
+          "looping": false,
+          "time": 1,
+          "time_down_event": {
+            "event": "raa:chicken_panicking_flee"
+          }
         }
       }
     },
@@ -333,25 +352,55 @@
         "emit_flap": true
       },
       "minecraft:environment_sensor": {
-        "triggers": {
-          "filters": [
-            {
-              "test": "is_baby",
-              "value": false
-            },
-            {
-              "test": "bool_property",
-              "domain": "raa:is_male",
-              "value": false
-            },
-            {
-              "test": "has_component",
-              "operator": "!=",
-              "value": "minecraft:spawn_entity"
-            }
-          ],
-          "event": "raa:chicken_egg_layer"
-        }
+        "triggers": [
+          {
+            "filters": [
+              {
+                "test": "is_baby",
+                "value": false
+              },
+              {
+                "test": "bool_property",
+                "domain": "raa:is_male",
+                "value": false
+              },
+              {
+                "test": "has_component",
+                "operator": "!=",
+                "value": "minecraft:spawn_entity"
+              }
+            ],
+            "event": "raa:chicken_egg_layer"
+          },
+          {
+            "filters": [
+              {
+                "test": "enum_property",
+                "domain": "raa:panicking_state",
+                "value": "none"
+              },
+              {
+                "test": "is_panicking",
+                "value": true
+              }
+            ],
+            "event": "raa:chicken_panicking_start"
+          },
+          {
+            "filters": [
+              {
+                "test": "enum_property",
+                "domain": "raa:panicking_state",
+                "value": "flee"
+              },
+              {
+                "test": "is_panicking",
+                "value": false
+              }
+            ],
+            "event": "raa:chicken_panicking_stop"
+          }
+        ]
       }
     },
 
@@ -446,6 +495,31 @@
           "component_groups": [
             "raa:chicken_egg_layer"
           ]
+        }
+      },
+      "raa:chicken_panicking_start": {
+        "set_property": {
+          "raa:panicking_state": "panic"
+        },
+        "add": {
+          "component_groups": [
+            "raa:chicken_panic_time"
+          ]
+        }
+      },
+      "raa:chicken_panicking_flee": {
+        "set_property": {
+          "raa:panicking_state": "flee"
+        },
+        "remove": {
+          "component_groups": [
+            "raa:chicken_panic_time"
+          ]
+        }
+      },
+      "raa:chicken_panicking_stop": {
+        "set_property": {
+          "raa:panicking_state": "none"
         }
       }
     }

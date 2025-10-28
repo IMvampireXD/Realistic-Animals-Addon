@@ -16,6 +16,9 @@
 		},
 		"raa_duckling_egg": {
 			"textures": "textures/raa/items/spawn_egg_duckling"
+		},
+		"raa_chicken_feed": {
+			"textures": "textures/raa/items/chicken_feed"
 		}
 	}
 }
